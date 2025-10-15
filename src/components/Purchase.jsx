@@ -5,7 +5,6 @@ import PageSection from "./PagesSection";
 import { clientPurchases } from "../data";
 import { useState } from "react";
 
-
 export default function PurchaseSection() {
   const [input, setInput] = useState("");
   const filteredTable = clientPurchases.filter(({ title }) =>
@@ -30,7 +29,7 @@ export default function PurchaseSection() {
         consultant="Consultant"
         date="Date"
         amount="Amount Paid"
-        stats="Status"   
+        stats="Status"
       />
       <PageSection />
     </>

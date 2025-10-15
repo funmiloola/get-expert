@@ -41,20 +41,20 @@ export default function Table({ filteredTable }) {
                       {name}
                     </span>
                   </td>
-                  <td className=" py-6 px-8 mid:px-8 sm:font-medium text-[9px] sm:text-sm text-[#030712]">
+                  <td className=" py-6 px-4 sm:font-medium text-[9px] sm:text-sm text-[#030712]">
                     {email}
                   </td>
-                  <td className=" py-6 px-4 mid:px-10 sm:font-medium text-[9px] sm:text-sm text-[#030712] ">
+                  <td className=" py-6 px-4 text-center sm:font-medium text-[9px] sm:text-sm text-[#030712] ">
                     {bookingHistory}
                   </td>
-                  <td className=" py-6 px-4 mid:px-8 sm:font-medium text-[9px] sm:text-sm text-[#030712]">
+                  <td className=" py-6 px-4  sm:font-medium text-[9px] sm:text-sm text-[#030712]">
                     {joinedDate}
                   </td>
-                  <td className=" py-6 px-4 mid:px-8 sm:font-medium text-[9px] sm:text-sm text-[#030712]">
+                  <td className=" py-6 px-4  sm:font-medium text-[9px] sm:text-sm text-[#030712]">
                     {purchases}
                   </td>
                   <td
-                    className={`py-6 px-4 mid:px-8 sm:font-medium text-[9px] sm:text-sm`}
+                    className={`py-6 px-4  sm:font-medium text-[9px] sm:text-sm`}
                   >
                     <span
                       className={`px-2 py-0.5 rounded-2xl  border   ${
