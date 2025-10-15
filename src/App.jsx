@@ -6,7 +6,7 @@ import Client from "./components/Client";
 import Expert from "./components/Expert";
 import ClientProfileSection from "./components/ClientProfileSection";
 import PurchaseSection from "./components/Purchase";
-import Workshop from "./components/Workshop";
+import ClientWorkshop from "./components/ClientWorkshop";
 import Review from "./components/Review";
 import Flag from "./components/Flag";
 import Note from "./components/Note";
@@ -17,6 +17,10 @@ import Payout from "./components/Payout";
 import ExpertReview from "./components/ExpertReview";
 import ExpertFlag from "./components/ExpertFlag";
 import ExpertNote from "./components/ExpertNote";
+import Workshop from "./components/Workshop";
+import WorkshopDetails from "./components/WorkshopDetails";
+import Transactions from "./components/Transactions";
+import ProductManagement from "./components/ProductManagement";
 function App() {
   return (
     <BrowserRouter>
@@ -29,7 +33,7 @@ function App() {
             <Route path="experts" element={<Expert />} />
           <Route path="client" element={<ClientProfileSection />}>
             <Route index element={<PurchaseSection />} />
-            <Route path="workshop" element={<Workshop />} />
+            <Route path="workshop" element={<ClientWorkshop />} />
             <Route path="review" element={<Review />} />
             <Route path="flags" element={<Flag />} />
             <Route path="notes" element={<Note/>}/>
@@ -41,12 +45,17 @@ function App() {
             <Route path="review" element={<ExpertReview />} />
             <Route path="flags" element={<ExpertFlag />} />
             <Route path="notes" element={<ExpertNote/>}/>
-          </Route>
+            </Route>
+           
         </Route>
-         
+          <Route path="/workshops" element={<Workshop />}>
+            <Route path="workshop-details" element={<WorkshopDetails/>}/>
+          </Route>
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/product" element={<ProductManagement/>}/>
           </Route>
           
-
+         
         <Route>404 Not Found</Route>
       </Routes>
     </BrowserRouter>
