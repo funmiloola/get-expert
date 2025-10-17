@@ -82,10 +82,13 @@ export default function Table({ filteredTable }) {
                       onClick={() => setOpenOptions((prev) => !prev)}
                     />
                   </td>
-                  {openOptions && (
+                        {openOptions && (
+                            <>
+                                <div className="inset-0 z-20 fixed" onClick={()=>setOpenOptions(false)}></div>
                     <div>
                       <Menu />
-                    </div>
+                                </div>
+                                </>
                   )}
                 </tr>
               )

@@ -21,41 +21,59 @@ import Workshop from "./components/Workshop";
 import WorkshopDetails from "./components/WorkshopDetails";
 import Transactions from "./components/Transactions";
 import ProductManagement from "./components/ProductManagement";
+import Report from "./components/Report";
+import ReportSection from "./components/ReportSection";
+import ReviewSection from "./components/ReviewSection";
+import Team from "./components/Team";
+import Settings from "./components/Settings";
+import ComingSoon from "./components/ComingSoon";
+import SettingsProfile from "./components/SettingsProfile";
+import Password from "./components/Password";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SectionDisplay />}>
           <Route index element={<DashboardSection />} />
-            
+
           <Route path="/clients" element={<ClientSection />}>
             <Route index element={<Client />} />
             <Route path="experts" element={<Expert />} />
-          <Route path="client" element={<ClientProfileSection />}>
-            <Route index element={<PurchaseSection />} />
-            <Route path="workshop" element={<ClientWorkshop />} />
-            <Route path="review" element={<Review />} />
-            <Route path="flags" element={<Flag />} />
-            <Route path="notes" element={<Note/>}/>
+            <Route path="client" element={<ClientProfileSection />}>
+              <Route index element={<PurchaseSection />} />
+              <Route path="workshop" element={<ClientWorkshop />} />
+              <Route path="review" element={<Review />} />
+              <Route path="flags" element={<Flag />} />
+              <Route path="notes" element={<Note />} />
             </Route>
-             <Route path="profile-expert" element={<ExpertProfileSection />}>
-            <Route index element={<Product />} />
-            <Route path="workshop" element={<ExpertWorkshop/>}/>
-            <Route path="payout" element={<Payout />} />
-            <Route path="review" element={<ExpertReview />} />
-            <Route path="flags" element={<ExpertFlag />} />
-            <Route path="notes" element={<ExpertNote/>}/>
+            <Route path="profile-expert" element={<ExpertProfileSection />}>
+              <Route index element={<Product />} />
+              <Route path="workshop" element={<ExpertWorkshop />} />
+              <Route path="payout" element={<Payout />} />
+              <Route path="review" element={<ExpertReview />} />
+              <Route path="flags" element={<ExpertFlag />} />
+              <Route path="notes" element={<ExpertNote />} />
             </Route>
-           
-        </Route>
+          </Route>
           <Route path="/workshops" element={<Workshop />}>
-            <Route path="workshop-details" element={<WorkshopDetails/>}/>
+            <Route path="workshop-details" element={<WorkshopDetails />} />
           </Route>
           <Route path="/transactions" element={<Transactions />} />
-          <Route path="/product" element={<ProductManagement/>}/>
+          <Route path="/product" element={<ProductManagement />} />
+          <Route path="/reports" element={<Report />}>
+            <Route index element={<ReportSection />} />
+            <Route path="reviews" element={<ReviewSection />} />
           </Route>
-          
-         
+          <Route path="/teams" element={<Team />} />
+          <Route path="/menu" element={<ComingSoon/>}/>
+          <Route path="/settings" element={<Settings />}>
+            <Route index element={<SettingsProfile />} />
+            <Route path="password" element={<Password/>}/>
+          </Route>
+          <Route path="/support" element={<ComingSoon />} />
+  
+        </Route>
+
         <Route>404 Not Found</Route>
       </Routes>
     </BrowserRouter>

@@ -14,7 +14,7 @@ export default function ClientSection() {
         <>
           <DashboardHeader
             title="Clients & Experts"
-            className={`flex-row items-start gap-3 pl-2 sm:pl-0 mid:gap-8`}
+            className={`flex-row items-start gap-3  mid:gap-8`}
             extra={
               <button
                 className={`flex gap-0.5 mid:gap-1.5 items-center bg-[#3B82F6] py-1 px-2  mid:py-2 mid:px-4 rounded-md ${
@@ -28,7 +28,7 @@ export default function ClientSection() {
               </button>
             }
           >
-            <div className="flex items-center  xl:w-[40%] mt-4 bg-[#E9EAEB] border-[#E9EAEB] rounded-md">
+            <div className="flex items-center   xl:w-[40%] mt-4 bg-[#E9EAEB] border-[#E9EAEB] rounded-md">
               <NavLink
                 end
                 to=""

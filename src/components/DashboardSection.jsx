@@ -25,7 +25,6 @@ ChartJS.register(
   Legend
 );
 
-
 const getConfigValues = () => {
   const width = window.innerWidth;
   if (width <= 640) {
@@ -96,14 +95,12 @@ const options = {
   },
 };
 
-
-
 export default function DashboardSection() {
   return (
     <div className="font-sans  ">
       <DashboardHeader
         title="My dashboard"
-        className="flex-col gap-3 pl-2 sm:pl-0 sm:flex-row sm:items-center font-sans"
+        className="flex-col gap-3  sm:flex-row sm:items-center font-sans"
         extra={
           <div className="flex gap-3">
             <div className="px-2 py-1 mid:px-4 mid:py-2.5 border border-[#D5D7DA] rounded-lg font-semibold text-xs mid:text-sm text-[#414651] cursor-pointer">
@@ -156,7 +153,7 @@ export default function DashboardSection() {
             <img src={totalIcon} alt="" className="cursor-pointer" />
           </div>
           <div className="flex items-center gap-2 sm:gap-4">
-            <Filter/>
+            <Filter />
             <div className="flex gap-1 border border-[#D5D7DA] py-1 px-1.5 sm:py-2 sm:px-3 rounded-lg cursor-pointer">
               <img src={filterLines} alt="" className="w-4 h-4 sm:w-6 sm:h-6" />
               <h4 className="text-xs sm:text-sm text-[#414651] font-semibold ">

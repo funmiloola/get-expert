@@ -6,7 +6,6 @@ import Table from "./Table";
 import PageSection from "./PagesSection";
 import Filter from "./filter";
 
-
 export default function Expert() {
   const [input, setInput] = useState("");
   const filteredTable = clients.filter(
@@ -24,14 +23,14 @@ export default function Expert() {
             Experts
           </h4>
           <div className="flex flex-col gap-4 md:gap-0 md:flex-row md:items-center pb-4 w-full justify-between">
-            <div className="w-full md:w-1/2">
+            <div className="w-full mid:w-1/2">
               <Input
                 placeholder="Search by name, email, phone"
                 input={input}
                 onChange={(e) => setInput(e.target.value)}
               />
             </div>
-            <Filter/>
+            <Filter />
           </div>
           <Table filteredTable={filteredTable} />
         </div>

@@ -50,23 +50,23 @@ export default function Workshop() {
   return (
     <>
       {!isWorkshopRoute ? (
-        <section className="pl-2 mid:pl-0">
-          <h2 className="text-[#181D27] text-2xl font-bold">Workshops</h2>
-          <div className="pt-8 w-full md:w-1/2">
+        <section className="">
+          <h2 className="text-[#181D27] text-xl mid:text-2xl font-bold pl-2 mid:pl-0">Workshops</h2>
+          <div className="pt-8 w-full mid:w-1/2">
             <Input
               placeholder="Search for workshops"
               input={input}
               onChange={(e) => setInput(e.target.value)}
             />
           </div>
-          <div className="overflow-x-auto pt-6 w-full ">
+          <div className="overflow-x-auto pt-4 mid:pt-6 w-full ">
             <table className=" min-w-full table-auto  border-collapse">
               <thead className="border-b border-b-[#E9EAEB]  text-xs text-[#717680] font-semibold">
                 <tr className="text-left">
                   <th className="py-6 px-4">Workshop Title</th>
                   <th className="py-6 px-4">Host</th>
                   <th className="py-6 px-4">Date</th>
-                  <th className=" px-6 py-4">Seats booked</th>
+                  <th className=" px-3 py-4">Seats booked</th>
                   <th className="px-6 py-4">Avg Rating</th>
                   <th className="py-6 px-10 md:px-4">Status</th>
                   <th className="py-6 px-4">
@@ -129,10 +129,16 @@ export default function Workshop() {
               </tbody>
             </table>
           </div>
-          {openOptions && (
+                  {openOptions && (
+                      <>
+                      <div
+        className="fixed inset-0 z-10"
+        onClick={() => setOpenOptions(false)}
+      ></div>
             <div>
               <WorkshopMenu />
-            </div>
+                          </div>
+                          </>
           )}
           <PageSection />
         </section>

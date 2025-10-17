@@ -82,8 +82,8 @@ export default function Transactions() {
     }
 
   return (
-    <section className="pl-2 md:pl-0">
-      <h2 className="text-[#181D27] text-2xl font-bold">Transactions</h2>
+    <section className="">
+      <h2 className="text-[#181D27] text-xl mid:text-2xl font-bold pl-2 mid:pl-0">Transactions</h2>
       <ClientCardGrid
         data={summary}
         className="grid grid-cols-1 mid:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -251,8 +251,12 @@ export default function Transactions() {
                       </tbody>
                   </table>
                    <div>
-                            {openOptions && (
-                                <TransactionMenu onClick={handleOpenModal} />
+                      {openOptions && (
+                          <>
+                              <div className="fixed inset-0 z-20" onClick={() => setOpenOptions(false)}></div>
+                              <TransactionMenu onClick={handleOpenModal} />
+                          </>
+                                
                             )}
                         </div>
               </div>

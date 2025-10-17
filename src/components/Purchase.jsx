@@ -13,7 +13,7 @@ export default function PurchaseSection() {
   return (
     <>
       <div className="flex flex-col md:flex-row md:justify-between md:items-center pt-8">
-        <div className="w-full md:w-1/2">
+        <div className="w-full mid:w-1/2">
           <Input
             placeholder="Search for registered Clients"
             input={input}

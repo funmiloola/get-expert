@@ -16,13 +16,25 @@ import menuIcon from "./assets/Icons/Activity.svg";
 import settingIcon from "./assets/Icons/Setting.svg";
 import supportIcon from "./assets/Icons/question mark.svg";
 import addUsersIcon from "./assets/Icons/Add User.svg";
-import profileIcon from './assets/Icons/Profile.svg';
-import dropdownIcon from './assets/Icons/Dropdown.svg';
-import redArrow from './assets/Icons/Icon (2).svg'
-import profilePicture from './assets/Images/Avatar.svg'
-import upgreenArrow from './assets/Icons/arrow-up.svg';
-import downredArrow from './assets/Icons/arrow-down.svg'
-import { ClientIcon, DashIcon, ProfileIcon, ReportIcon, TeamIcon, WorkshopIcon,TransactionIcon, ProductIcon, MenuIcon, SettingIcon, SupportIcon } from "./components/icon";
+import profileIcon from "./assets/Icons/Profile.svg";
+import dropdownIcon from "./assets/Icons/Dropdown.svg";
+import redArrow from "./assets/Icons/Icon (2).svg";
+import profilePicture from "./assets/Images/Avatar.svg";
+import upgreenArrow from "./assets/Icons/arrow-up.svg";
+import downredArrow from "./assets/Icons/arrow-down.svg";
+import {
+  ClientIcon,
+  DashIcon,
+  ProfileIcon,
+  ReportIcon,
+  TeamIcon,
+  WorkshopIcon,
+  TransactionIcon,
+  ProductIcon,
+  MenuIcon,
+  SettingIcon,
+  SupportIcon,
+} from "./components/icon";
 export const cards = [
   {
     icon: userIcon,
@@ -69,54 +81,54 @@ export const cards = [
 ];
 export const menuItems = [
   {
-    icon: <DashIcon/>,
+    icon: <DashIcon />,
     name: "Dashboard",
     to: "/",
   },
   {
-    icon: <ClientIcon  />,
+    icon: <ClientIcon />,
     name: "Clients & Experts",
     to: "/clients",
   },
   {
-    icon: <TeamIcon/>,
+    icon: <TeamIcon />,
     name: "Teams",
     to: "/teams",
   },
   {
-    icon: <WorkshopIcon/>,
+    icon: <WorkshopIcon />,
     name: "Workshops",
     to: "/workshops",
   },
   {
-    icon: <ReportIcon/>,
+    icon: <ReportIcon />,
     name: "Reports & Reviews",
     to: "/reports",
   },
   {
-    icon: <TransactionIcon/>,
+    icon: <TransactionIcon />,
     name: "Transactions",
     to: "/transactions",
   },
   {
-    icon: <ProductIcon/>,
+    icon: <ProductIcon />,
     name: "Product Management",
     to: "/product",
   },
   {
-    icon: <MenuIcon/>,
+    icon: <MenuIcon />,
     name: "Menu Title",
     to: "/menu",
   },
 ];
 export const menuSettings = [
   {
-    icon: <SettingIcon/>,
+    icon: <SettingIcon />,
     name: "Settings",
     to: "/settings",
   },
   {
-    icon: <SupportIcon/>,
+    icon: <SupportIcon />,
     name: "Support & Tickets",
     to: "/support",
   },
@@ -165,7 +177,7 @@ export const clientCards = [
   {
     icon: userIcon,
     title: "Total Clients",
-    menu:dropdownIcon,
+    menu: dropdownIcon,
     figure: "6,124",
     img: arrow,
     per: "100%",
@@ -173,10 +185,10 @@ export const clientCards = [
   {
     icon: addUsersIcon,
     title: "New Clients",
-    menu:dropdownIcon,
+    menu: dropdownIcon,
     figure: "316",
     img: arrow,
-    per:"100%"
+    per: "100%",
   },
   {
     icon: profileIcon,
@@ -184,86 +196,86 @@ export const clientCards = [
     menu: dropdownIcon,
     figure: "2,420",
     img: redArrow,
-    per:"100%"
-  }
+    per: "100%",
+  },
 ];
 export const clients = [
   {
-    pic:profilePicture,
+    pic: profilePicture,
     name: "Rhiannon Matthaias",
     email: "rhimat@com",
     bookingHistory: 23,
     joinedDate: "Jan 16, 2025",
     purchases: "₦280,000",
     status: "Suspended",
-     menu:dropdownIcon,
+    menu: dropdownIcon,
   },
   {
-    pic:profilePicture,
+    pic: profilePicture,
     name: "Dain Aetos",
     email: "dainaetos@com",
     bookingHistory: 21,
     joinedDate: "Jan 16, 2025",
     purchases: "₦280,000",
     status: "Active",
-     menu:dropdownIcon,
+    menu: dropdownIcon,
   },
   {
-    pic:profilePicture,
+    pic: profilePicture,
     name: "Garrick Matthews",
     email: "garrick@com",
     bookingHistory: 25,
     joinedDate: "Jan 16, 2025",
     purchases: "₦280,000",
     status: "Suspended",
-     menu:dropdownIcon,
+    menu: dropdownIcon,
   },
   {
-    pic:profilePicture,
+    pic: profilePicture,
     name: "Mira Sorrengail",
     email: "mirasorren@com",
     bookingHistory: 13,
     joinedDate: "Jan 16, 2025",
     purchases: "₦280,000",
     status: "Flagged",
-     menu:dropdownIcon,
+    menu: dropdownIcon,
   },
   {
-    pic:profilePicture,
+    pic: profilePicture,
     name: "Ridoc Davis",
     email: "ridocdav@com",
     bookingHistory: 12,
     joinedDate: "Jan 16, 2025",
     purchases: "₦280,000",
     status: "Flagged",
-     menu:dropdownIcon,
+    menu: dropdownIcon,
   },
   {
-    pic:profilePicture,
+    pic: profilePicture,
     name: "Liam Mairi",
     email: "liammairi@com",
     bookingHistory: 5,
     joinedDate: "Jan 16, 2025",
     purchases: "₦280,000",
     status: "Active",
-     menu:dropdownIcon,
+    menu: dropdownIcon,
   },
   {
-    pic:profilePicture,
+    pic: profilePicture,
     name: "Violet Sorrengail",
     email: "violetdrier@com",
     bookingHistory: 10,
     joinedDate: "Jan 16, 2025",
     purchases: "₦280,000",
     status: "Active",
-     menu:dropdownIcon,
+    menu: dropdownIcon,
   },
 ];
 export const experts = [
   {
     icon: userIcon,
     title: "Total Experts",
-    menu:dropdownIcon,
+    menu: dropdownIcon,
     figure: "2,736",
     img: arrow,
     per: "100%",
@@ -271,7 +283,7 @@ export const experts = [
   {
     icon: userIcon,
     title: "Active Experts",
-    menu:dropdownIcon,
+    menu: dropdownIcon,
     figure: "316",
     img: arrow,
     per: "100%",
@@ -279,37 +291,37 @@ export const experts = [
   {
     icon: userIcon,
     title: "Suspended Experts",
-    menu:dropdownIcon,
+    menu: dropdownIcon,
     figure: "21",
     img: arrow,
     per: "100%",
   },
-]
+];
 export const stats = [
-    {
-      title: "Total Spent",
+  {
+    title: "Total Spent",
     value: "₦63,500",
-      icon:downredArrow,
-      change: "100%",
-    },
-    {
-      title: "Products Purchased",
-      value: "12",
-      icon:upgreenArrow,
-      change: "100%",
-    },
-    {
-      title: "Workshops Attended",
-      value: "5",
-      icon:upgreenArrow,
-      change: "100%",
-    },
-    {
-      title: "Sessions Booked",
-      value: "3",
-      icon:upgreenArrow,
-      change: "100%",
-    },
+    icon: downredArrow,
+    change: "100%",
+  },
+  {
+    title: "Products Purchased",
+    value: "12",
+    icon: upgreenArrow,
+    change: "100%",
+  },
+  {
+    title: "Workshops Attended",
+    value: "5",
+    icon: upgreenArrow,
+    change: "100%",
+  },
+  {
+    title: "Sessions Booked",
+    value: "3",
+    icon: upgreenArrow,
+    change: "100%",
+  },
 ];
 export const clientPurchases = [
   {
@@ -321,7 +333,7 @@ export const clientPurchases = [
     price: "₦5,000",
     status: "Delivered",
     action: "View",
-    secondActions:"Download"
+    secondActions: "Download",
   },
   {
     title: "Launch Checklist Video",
@@ -332,7 +344,7 @@ export const clientPurchases = [
     price: "₦5,000",
     status: "Delivered",
     action: "View",
-    secondActions:"Download"
+    secondActions: "Download",
   },
   {
     title: "Branding Guide",
@@ -343,38 +355,38 @@ export const clientPurchases = [
     price: "₦5,000",
     status: "Delivered",
     action: "View",
-    secondActions:"Download"
-  }
+    secondActions: "Download",
+  },
 ];
 export const consultations = [
-    {
-        title: "Intro to UX",
-         type: "@SmartStrategy",
+  {
+    title: "Intro to UX",
+    type: "@SmartStrategy",
     date: "May 30, 2025 | 09: 32AM",
-        price: "₦5,000",
-        rating: 4.6,
-        status: "Completed",
+    price: "₦5,000",
+    rating: 4.6,
+    status: "Completed",
     action: "View",
-    secondActions:"Review"
-    },
-    {
-        title: "Launch Checklist Video",
-        type: "@TemplateKing",
-      date: "June 5, 2025 | 09: 32AM",
-      price: "₦5,000",
-        rating: '-',
-        status: "Due",
+    secondActions: "Review",
+  },
+  {
+    title: "Launch Checklist Video",
+    type: "@TemplateKing",
+    date: "June 5, 2025 | 09: 32AM",
+    price: "₦5,000",
+    rating: "-",
+    status: "Due",
     action: "View",
-    secondActions:"Rebook"
-    },
-    {
-        title: "Pricing Masterclass",
-        type: "@DesignBoss",
+    secondActions: "Rebook",
+  },
+  {
+    title: "Pricing Masterclass",
+    type: "@DesignBoss",
     date: "Apr 12, 2023 | 09: 32AM",
-        price: "₦5,000",
-        rating: '-',
-        status: "Expired",
+    price: "₦5,000",
+    rating: "-",
+    status: "Expired",
     action: "View",
-    secondActions:"Review"
-    }
-]
+    secondActions: "Review",
+  },
+];

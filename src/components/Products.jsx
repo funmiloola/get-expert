@@ -62,7 +62,7 @@ export default function Product() {
   return (
     <>
       <div className="flex flex-col gap-4 md:flex-row md:gap-0 md:items-center justify-between pt-8">
-        <div className="w-full md:w-1/2">
+        <div className="w-full mid:w-1/2">
           <Input
             input={input}
             onChange={(e) => setInput(e.target.value)}

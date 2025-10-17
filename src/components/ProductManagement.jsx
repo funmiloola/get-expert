@@ -61,12 +61,12 @@ export default function ProductManagement() {
    setOpenOptions(false)  
  } 
   return (
-    <section className="pl-2 mid:pl-0">
-          <h2 className="pb-6 font-bold text-2xl text-[#181D27]">Product Management</h2>
-          <div className="w-full md:w-1/2">
+    <section className="">
+          <h2 className="pb-6 font-bold text-xl mid:text-2xl text-[#181D27] pl-2 mid:pl-0">Product Management</h2>
+          <div className="w-full mid:w-1/2">
               <Input placeholder="Search for products" input={input} onChange={(e) => setInput(e.target.value)}/>
               </div>
-      <div className="overflow-x-auto pt-6">
+      <div className="overflow-x-auto pt-3 mid:pt-6">
         <table className="min-w-full table-auto border-collapse">
           <thead className="border-b border-b-[#E9EAEB]  text-xs text-[#717680] font-semibold">
             <tr className="text-left">
@@ -136,7 +136,11 @@ export default function ProductManagement() {
           </tbody>
               </table>
               {openOptions && (
-                  <ProductMenu onClick={handleModal} />
+                  <>
+                      <div className="fixed inset-0 z-20" onClick={()=>setOpenOptions(false)}></div>
+                      <ProductMenu onClick={handleModal} />
+                  </>
+                  
               )}
               {openModal && (
                   <ProductModal onClick={ ()=> setOpenModal(false)} />
