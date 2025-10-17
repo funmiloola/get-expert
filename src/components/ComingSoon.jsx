@@ -1,4 +1,4 @@
-import logo from '../assets/images/undraw_coming-soon_7lvi.svg'
+import logo from '../assets/Images/undraw_coming-soon_7lvi.svg'
 export default function ComingSoon() {
     return (
           <section className='font-sans'>

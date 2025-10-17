@@ -1,4 +1,3 @@
-import ClientTableDetail from "./ClientTableDetails";
 import { useState } from "react";
 import Filter from "./filter";
 import Input from "./Input";
