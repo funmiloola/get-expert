@@ -38,7 +38,7 @@ function App() {
         <Route path="/" element={<SectionDisplay />}>
           <Route index element={<DashboardSection />} />
 
-          <Route path="/clients" element={<ClientSection />}>
+          <Route path="clients" element={<ClientSection />}>
             <Route index element={<Client />} />
             <Route path="experts" element={<Expert />} />
             <Route path="client" element={<ClientProfileSection />}>
@@ -57,22 +57,22 @@ function App() {
               <Route path="notes" element={<ExpertNote />} />
             </Route>
           </Route>
-          <Route path="/workshops" element={<Workshop />}>
+          <Route path="workshops" element={<Workshop />}>
             <Route path="workshop-details" element={<WorkshopDetails />} />
           </Route>
-          <Route path="/transactions" element={<Transactions />} />
-          <Route path="/product" element={<ProductManagement />} />
-          <Route path="/reports" element={<Report />}>
+          <Route path="transactions" element={<Transactions />} />
+          <Route path="product" element={<ProductManagement />} />
+          <Route path="reports" element={<Report />}>
             <Route index element={<ReportSection />} />
             <Route path="reviews" element={<ReviewSection />} />
           </Route>
-          <Route path="/teams" element={<Team />} />
-          <Route path="/menu" element={<ComingSoon/>}/>
-          <Route path="/settings" element={<Settings />}>
+          <Route path="teams" element={<Team />} />
+          <Route path="menu" element={<ComingSoon/>}/>
+          <Route path="settings" element={<Settings />}>
             <Route index element={<SettingsProfile />} />
             <Route path="password" element={<Password/>}/>
           </Route>
-          <Route path="/support" element={<ComingSoon />} />
+          <Route path="support" element={<ComingSoon />} />
   
         </Route>
 
