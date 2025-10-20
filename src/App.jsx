@@ -29,10 +29,12 @@ import Settings from "./components/Settings";
 import ComingSoon from "./components/ComingSoon";
 import SettingsProfile from "./components/SettingsProfile";
 import Password from "./components/Password";
+import Signup from "./components/Signup";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/signup" element={<Signup/> } />
         <Route path="/" element={<SectionDisplay />}>
           <Route index element={<DashboardSection />} />
 
