@@ -1,41 +1,48 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SectionDisplay from "./components/SectionDisplay";
-import DashboardSection from "./components/DashboardSection";
-import ClientSection from "./components/ClientServer";
-import Client from "./components/Client";
-import Expert from "./components/Expert";
-import ClientProfileSection from "./components/ClientProfileSection";
-import PurchaseSection from "./components/Purchase";
-import ClientWorkshop from "./components/ClientWorkshop";
-import Review from "./components/Review";
-import Flag from "./components/Flag";
-import Note from "./components/Note";
-import ExpertProfileSection from "./components/ExpertProfileSection";
-import Product from "./components/Products";
-import ExpertWorkshop from "./components/ExpertWorkshop";
-import Payout from "./components/Payout";
-import ExpertReview from "./components/ExpertReview";
-import ExpertFlag from "./components/ExpertFlag";
-import ExpertNote from "./components/ExpertNote";
-import Workshop from "./components/Workshop";
-import WorkshopDetails from "./components/WorkshopDetails";
-import Transactions from "./components/Transactions";
-import ProductManagement from "./components/ProductManagement";
-import Report from "./components/Report";
-import ReportSection from "./components/ReportSection";
-import ReviewSection from "./components/ReviewSection";
-import Team from "./components/Team";
-import Settings from "./components/Settings";
-import ComingSoon from "./components/ComingSoon";
-import SettingsProfile from "./components/SettingsProfile";
-import Password from "./components/Password";
-import Signup from "./components/Signup";
+import SectionDisplay from "./views/SectionDisplay/SectionDisplay";
+import ClientSection from "./views/ClientServer.jsx";
+import Client from "./views/ClientServer.jsx/Client.jsx";
+import Expert from "./views/ClientServer.jsx/Expert.jsx";
+import ClientProfileSection from "./views/ClientServer.jsx/ClientProfile/index.jsx";
+import PurchaseSection from "./views/ClientServer.jsx/ClientProfile/Purchase.jsx";
+import ClientWorkshop from "./views/ClientServer.jsx/ClientProfile/Workshop.jsx";
+import Review from "./views/ClientServer.jsx/ClientProfile/Review.jsx";
+import Flag from "./views/ClientServer.jsx/ClientProfile/Flags.jsx";
+import Note from "./views/ClientServer.jsx/ClientProfile/Notes.jsx";
+import ExpertProfileSection from "./views/ClientServer.jsx/ExpertProfile/index.jsx";
+import Product from "./views/ClientServer.jsx/ExpertProfile/Product.jsx";
+import ExpertWorkshop from "./views/ClientServer.jsx/ExpertProfile/Workshop.jsx";
+import Payout from "./views/ClientServer.jsx/ExpertProfile/Payout.jsx";
+import ExpertReview from "./views/ClientServer.jsx/ExpertProfile/Reviews.jsx";
+import ExpertFlag from "./views/ClientServer.jsx/ExpertProfile/Flag.jsx";
+import ExpertNote from "./views/ClientServer.jsx/ExpertProfile/Note.jsx";
+import Workshop from "./views/Workshop/index.jsx";
+import WorkshopDetails from "./views/Workshop/WorkshopDetails/index.jsx";
+import Transactions from "./views/Transaction/index.jsx";
+import ProductManagement from "./views/Product/index.jsx";
+import ReportSection from "./views/Reports/ReportSection.jsx";
+import ReviewSection from "./views/Reports/ReviewSection.jsx";
+import Team from "./views/Team/index.jsx";
+import Settings from "./views/Settings/index.jsx";
+import SettingsProfile from "./views/Settings/SettingsProfile/index.jsx";
+import Password from "./views/SectionDisplay/Password.jsx";
+import Signin from "./views/Signin.jsx";
+import Signup from "./views/Signup.jsx";
+import { ToastContainer } from "react-toastify";
+import Wallet from "./views/Settings/Wallet.jsx";
+import SettingNotification from "./views/Settings/SettingsNotify.jsx";
+import DashboardSection from "./views/dashboard";
+import Menu from "./views/Menu/index.jsx";
+import Support from "./views/Support/index.jsx";
+import Reports from "./views/Reports/index.jsx";
 function App() {
   return (
+    <>
     <BrowserRouter>
       <Routes>
-        <Route path="/signup" element={<Signup/> } />
-        <Route path="/" element={<SectionDisplay />}>
+        <Route path="/" element={<Signin />} />
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/home" element={<SectionDisplay />}>
           <Route index element={<DashboardSection />} />
 
           <Route path="clients" element={<ClientSection />}>
@@ -62,23 +69,27 @@ function App() {
           </Route>
           <Route path="transactions" element={<Transactions />} />
           <Route path="product" element={<ProductManagement />} />
-          <Route path="reports" element={<Report />}>
+          <Route path="reports" element={<Reports />}>
             <Route index element={<ReportSection />} />
             <Route path="reviews" element={<ReviewSection />} />
           </Route>
           <Route path="teams" element={<Team />} />
-          <Route path="menu" element={<ComingSoon/>}/>
+          <Route path="menu" element={<Menu/>}/>
           <Route path="settings" element={<Settings />}>
             <Route index element={<SettingsProfile />} />
-            <Route path="password" element={<Password/>}/>
+              <Route path="password" element={<Password />} />
+              <Route path="wallet" element={<Wallet />} />
+              <Route path="notification" element={<SettingNotification/>}/>
           </Route>
-          <Route path="support" element={<ComingSoon />} />
+          <Route path="support" element={<Support/>} />
   
         </Route>
 
         <Route>404 Not Found</Route>
       </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+      <ToastContainer position="top-center" autoClose={4000} />
+      </>
   );
 }
 

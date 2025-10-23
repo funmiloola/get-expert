@@ -12,11 +12,16 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
     "chart.js": "^4.5.0",
+    "firebase": "^12.4.0",
     "react": "^19.1.1",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.1.1",
+    "react-flags-select": "^2.5.0",
+    "react-hook-form": "^7.65.0",
     "react-router-dom": "^7.9.3",
-    "tailwindcss": "^4.1.13"
+    "react-toastify": "^11.0.5",
+    "tailwindcss": "^4.1.13",
+    "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

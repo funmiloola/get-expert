@@ -4,10 +4,10 @@ export default function Menu() {
   const location = useLocation();
     const navigate = useNavigate();
       const path = () => {
-    if (location.pathname.includes("/clients/experts")) {
-      navigate("/clients/profile-expert");
-    } else if (location.pathname.includes("/clients")) {
-      navigate("/clients/client");
+    if (location.pathname.includes("/home/clients/experts")) {
+      navigate("/home/clients/profile-expert");
+    } else if (location.pathname.includes("/home/clients")) {
+      navigate("/home/clients/client");
     } else {
       return "/";
     }
@@ -20,7 +20,7 @@ export default function Menu() {
   ];
 
   return (
-    <section className="font-sans absolute right-8 bottom-20 w-42 md:w-[235px] z-50 bg-white border border-white rounded-xl shadow-xs px-1 pt-1.5 pb-3">
+    <section className="font-sans absolute right-8 bottom-0 w-42 md:w-[235px] z-50 bg-white border border-white rounded-xl shadow-xs px-1 pt-1.5 pb-3">
       <ul className="">
         {menuItems.map((menu, index) => (
           <li

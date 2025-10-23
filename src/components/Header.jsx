@@ -3,11 +3,13 @@ import favouriteIcon from "../assets/Icons/Heart.svg";
 import notificationIcon from "../assets/Icons/Notification.svg";
 import avatar from "../assets/Icons/Avatars.svg";
 import ProfileModal from "./ProfileModal";
-import { useState } from "react";
-
-
+import { useState,useRef } from "react";
+import { useOnClickOutside } from "usehooks-ts";
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(false);
+  const dropdownRef = useRef()
+  useOnClickOutside(dropdownRef,()=> setOpenDropdown(false))
+  
   function handleOpenDropdown() {
     setOpenDropdown((prev) => !prev);
   }
@@ -41,9 +43,12 @@ export default function Header() {
         </div>
       </div>
       {openDropdown && (
-        <div className="absolute right-0 mt-3">
+        <>
+           <div ref={dropdownRef} className="absolute right-0 mt-3">
           <ProfileModal />
         </div>
+        </>
+       
       )}
     </header>
   );
