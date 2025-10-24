@@ -2,7 +2,6 @@ import Input from "../../../components/Input";
 import { consultations } from "../../../data";
 import PageSection from "../../../components/PagesSection";
 import { useState } from "react";
-import dropdown from "../../../assets/Icons/Dropdown.svg";
 
 export default function ClientWorkshop() {
   const [input, setInput] = useState("");
@@ -29,7 +28,7 @@ export default function ClientWorkshop() {
               <th className="px-6 py-6">Rating</th>
               <th className="px-10  py-6">Status</th>
               <th className="px-10 py-6">
-                <img src={dropdown} alt="" />
+                <img src="/Icons/Dropdown.svg" alt="" />
               </th>
             </tr>
           </thead>

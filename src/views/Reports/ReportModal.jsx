@@ -1,5 +1,3 @@
-import closeIcon from "../../assets/Icons/icons8-close.svg";
-import image from "../../assets/Images/Image (6).svg";
 
 export default function ReportModal({onClick}) {
   const reportData = [
@@ -10,8 +8,8 @@ export default function ReportModal({onClick}) {
       name: "Description",
       data: "This template is not as advertised. It's missing key slides shown in the preview and has several broken elements.",
     },
-    { name: "Expert", pic: image, data: "@slidepro" },
-    { name: "Reported By", pic: image, data: "@temilolu" },
+    { name: "Expert", pic: "/Images/Image (6).svg", data: "@slidepro" },
+    { name: "Reported By", pic:"/Images/Image (6).svg", data: "@temilolu" },
     { name: "Date Reported", data: "June 12, 2025 • 4:22 PM" },
     { name: "Status", data: "Resolved" },
   ];
@@ -23,7 +21,7 @@ export default function ReportModal({onClick}) {
           <h2 className="text-[20px] text-[#030712] font-semibold">
             Report ID RPT_00492
           </h2>
-          <img src={closeIcon} alt="" className="cursor-pointer" onClick={onClick}/>
+          <img src="/Icons/icons8-close.svg" alt="" className="cursor-pointer" onClick={onClick}/>
         </header>
         <ul className="flex flex-col gap-4 pt-6">
           {reportData.map(({ name, data, pic }) => (

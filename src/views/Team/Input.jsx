@@ -1,5 +1,4 @@
 import Input from "../../components/Input"
-import plusIcon from "../../assets/Icons/Plus 4.svg";
 
 export default function InputSection({input,onChange}) {
     return (
@@ -12,7 +11,7 @@ export default function InputSection({input,onChange}) {
                     />
                   </div>
                   <div className="flex gap-2 items-center px-4 py-2 border border-[#3B82F6] bg-[#3B82F6] rounded-lg cursor-pointer">
-                    <img src={plusIcon} alt="" />
+                    <img src="/Icons/Plus 4.svg" alt="" />
                     <span className="text-[#FFFFFF] font-semibold text-sm">
                       Add member
                     </span>

@@ -1,5 +1,4 @@
 import InputField from "../components/inputField";
-import logo from "../assets/Icons/Frame.svg";
 import { useForm } from "react-hook-form";
 import { auth } from "../firebase/firebase";
 import { Link, useNavigate } from "react-router-dom";
@@ -55,7 +54,7 @@ export default function Signin() {
   return (
     <>
       <div className="font-sans flex flex-col items-center gap-4 pt-24 px-8 lg:px-0">
-        <img src={logo} alt="" />
+        <img src="/Icons/Frame.svg" alt="" />
         <h2 className="text-xl md:text-3xl font-semibold">
           Login to your account.
         </h2>

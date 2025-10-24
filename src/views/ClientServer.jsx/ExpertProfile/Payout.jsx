@@ -1,4 +1,3 @@
-import dropdown from "../../../assets/Icons/Dropdown.svg";
 import PageSection from "../../../components/PagesSection";
 
 export default function Payout() {
@@ -8,35 +7,35 @@ export default function Payout() {
       amount: "$20,000.00",
       paymentMethod: "Bank Transfer",
       status: "Paid",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       date: "Apr 28, 2023 | 11:32AM",
       amount: "$11,000.00",
       paymentMethod: "Bank Transfer",
       status: "Failed",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       date: "Apr 31, 2023 | 06:32AM",
       amount: "$5,000.00",
       paymentMethod: "Bank Transfer",
       status: "Failed",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       date: "Apr 12, 2023 | 08:32AM",
       amount: "$20,000.00",
       paymentMethod: "Bank Transfer",
       status: "Paid",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       date: "Apr 24, 2023 | 07:32AM",
       amount: "$2,000.00",
       paymentMethod: "Bank Transfer",
       status: "Paid",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
   ];
 
@@ -54,7 +53,7 @@ export default function Payout() {
               <th className="mid:px-15 px-4   py-6 ">Payment Method</th>
               <th className="mid:px-15 px-4  py-6 ">Status</th>
               <th className="mid:px-15 px-4   py-6">
-                <img src={dropdown} alt="" />
+                <img src="/Icons/Dropdown.svg" alt="" />
               </th>
             </tr>
           </thead>
@@ -86,7 +85,7 @@ export default function Payout() {
                   </span>
                 </td>
                 <td className=" py-6 px-2 mid:px-15 min-w-[50px]">
-                  <img src={dropdown} alt="" />
+                  <img src="/Icons/Dropdown.svg" alt="" />
                 </td>
               </tr>
             ))}

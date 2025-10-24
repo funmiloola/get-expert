@@ -1,14 +1,12 @@
 import { useRef, useState } from "react";
-import dropdown from "../../assets/Icons/Dropdown.svg";
 import Menu from "../../components/Menu";
-import { Outlet } from "react-router-dom";
 import { useOnClickOutside } from "usehooks-ts";
 
 export default function Table({ filteredTable }) {
   const [openOptions, setOpenOptions] = useState(null);
-  const dropdownRef = useRef()
-  useOnClickOutside(dropdownRef, () => setOpenOptions(null))
-  
+  const dropdownRef = useRef();
+  useOnClickOutside(dropdownRef, () => setOpenOptions(null));
+
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full table-auto border-collapse">
@@ -21,24 +19,30 @@ export default function Table({ filteredTable }) {
             <th className=" py-6 px-4 ">Purchases</th>
             <th className=" py-6 px-4 ">Client Status</th>
             <th className=" py-6 px-4 ">
-              <img src={dropdown} alt="" className="" />
+              <img src="/Icons/Dropdown.svg" alt="" className="" />
             </th>
           </tr>
         </thead>
         <tbody>
           {Array.isArray(filteredTable) && filteredTable.length > 0 ? (
-           filteredTable.map(
-              ({
-                pic,
-                name,
-                email,
-                bookingHistory,
-                date,
-                purchases,
-                status,
-                menu,
-              },index) => (
-                <tr key={index} className="border-b border-b-[#E9EAEB] text-left">
+            filteredTable.map(
+              (
+                {
+                  pic,
+                  name,
+                  email,
+                  bookingHistory,
+                  date,
+                  purchases,
+                  status,
+                  menu,
+                },
+                index
+              ) => (
+                <tr
+                  key={index}
+                  className="border-b border-b-[#E9EAEB] text-left"
+                >
                   <td className="flex items-center gap-2 py-6 px-4 ">
                     <img src={pic} alt="" />
                     <span className="sm:font-medium text-[9px] sm:text-sm text-[#030712]">
@@ -83,22 +87,23 @@ export default function Table({ filteredTable }) {
                       src={menu}
                       alt=""
                       className=""
-                      onClick={() => setOpenOptions(openOptions === index ? null :index)}
+                      onClick={() =>
+                        setOpenOptions(openOptions === index ? null : index)
+                      }
                     />
                     {openOptions === index && (
-                    <div ref={dropdownRef}>
-                      <Menu />
+                      <div ref={dropdownRef}>
+                        <Menu />
                       </div>
-                  )}
+                    )}
                   </td>
-                        
                 </tr>
               )
             )
           ) : (
-              <tr>
-              <td>No result found</td>  
-              </tr>
+            <tr>
+              <td>No result found</td>
+            </tr>
           )}
         </tbody>
       </table>

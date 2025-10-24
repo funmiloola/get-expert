@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 export default function Menu() {
   const location = useLocation();
-    const navigate = useNavigate();
-      const path = () => {
+  const navigate = useNavigate();
+  const path = () => {
     if (location.pathname.includes("/home/clients/experts")) {
       navigate("/home/clients/profile-expert");
     } else if (location.pathname.includes("/home/clients")) {
@@ -13,10 +13,10 @@ export default function Menu() {
     }
   };
   const menuItems = [
-    { name: "View", to:path() },
-    { name: "Suspend", to:"not-found" },
-    { name: "Reset Password",to:"not-found" },
-    { name: "Delete",to:"not-found" },
+    { name: "View", to: path() },
+    { name: "Suspend", to: "not-found" },
+    { name: "Reset Password", to: "not-found" },
+    { name: "Delete", to: "not-found" },
   ];
 
   return (

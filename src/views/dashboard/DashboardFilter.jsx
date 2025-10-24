@@ -1,4 +1,4 @@
-import filterLines from "../../assets/Icons/filter-lines.svg";
+
 
 
 export default function DashboardFilter({ selected, onChange }) {
@@ -13,7 +13,7 @@ export default function DashboardFilter({ selected, onChange }) {
       <h4 className={`cursor-pointer ${selected === "24hours" ? 'border border-white bg-white px-3 py-1' : null}`} onClick={()=>onChange("24hours")}>24 hours</h4>
       </div>
       <div className="flex gap-1 border border-[#D5D7DA] py-1 px-1.5 sm:py-2 sm:px-3 rounded-lg cursor-pointer">
-              <img src={filterLines} alt="" className="w-4 h-4 sm:w-6 sm:h-6" />
+              <img src="/Icons/filter-lines.svg" alt="" className="w-4 h-4 sm:w-6 sm:h-6" />
               <h4 className="text-xs sm:text-sm text-[#414651] font-semibold ">
                 Filters
               </h4>

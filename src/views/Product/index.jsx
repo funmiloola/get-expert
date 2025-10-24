@@ -1,6 +1,5 @@
 import Input from "../../components/Input"
 import PageSection from "../../components/PagesSection"
-import dropdown from "../../assets/Icons/Dropdown.svg";
 import Table from "./Table";
 import { useState } from "react";
 export default function ProductManagement() {
@@ -15,7 +14,7 @@ export default function ProductManagement() {
           reviews: 13,
           createdOn: "Apr 12, 2023",
           payoutStatus: "Under review",
-          icon: dropdown,
+          icon: "/Icons/Dropdown.svg",
         },
         {
           productName: "Client Strategy Template",
@@ -26,7 +25,7 @@ export default function ProductManagement() {
           reviews: 13,
           createdOn: "Apr 24, 2023",
           payoutStatus: "Published",
-          icon: dropdown,
+          icon: "/Icons/Dropdown.svg",
         },
         {
           productName: "Client Strategy Template",
@@ -37,7 +36,7 @@ export default function ProductManagement() {
           reviews: 13,
           createdOn: "Apr 25, 2023",
           payoutStatus: "Removed",
-          icon: dropdown,
+          icon: "/Icons/Dropdown.svg",
         },
         {
           productName: "Client Strategy Template",
@@ -48,7 +47,7 @@ export default function ProductManagement() {
           reviews: 13,
           createdOn: "Apr 29, 2023",
           payoutStatus: "Approved",
-          icon: dropdown,
+          icon: "/Icons/Dropdown.svg",
         },
     ];
      const filteredProduct = products.filter(({productName})=>productName.toLowerCase().includes(input.toLowerCase()))

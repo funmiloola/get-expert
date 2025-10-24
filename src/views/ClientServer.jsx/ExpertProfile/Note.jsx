@@ -1,55 +1,52 @@
-import plusIcon from "../../../assets/Icons/button-icon.svg";
-import profilePicture from "../../../assets/Images/Avatar.svg";
-import dropdown from "../../../assets/Icons/Dropdown.svg";
 import PageSection from "../../../components/PagesSection";
 
 export default function ExpertNote() {
   const adminData = [
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatar.svg",
       name: "Alison Ogaga",
       message: "Consultant was warned about pricing structure on April 22.",
       date: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatar.svg",
       name: "Jennifer Johnson",
       message: "Consultant was warned about pricing structure on April 22.",
       date: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatar.svg",
       name: "Samuel Smith",
       message:
         "Flagged twice for identical product uploads — under monitoring.",
       date: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatar.svg",
       name: "Alison Ogaga",
       message:
         "Flagged twice for identical product uploads — under monitoring.",
       date: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatar.svg",
       name: "Jennifer Johnson",
       message:
         "Flagged twice for identical product uploads — under monitoring.",
       date: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatar.svg",
       name: "Samuel Smith",
       message:
         "Flagged twice for identical product uploads — under monitoring.",
       date: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
   ];
 
@@ -58,7 +55,7 @@ export default function ExpertNote() {
       <div className="flex justify-between ">
         <h2 className="text-lg font-bold text-[#030712]">Notes</h2>
         <div className="flex gap-2 items-center border border-[#C9D0D8] rounded-lg px-6.5 py-2 cursor-pointer">
-          <img src={plusIcon} alt="" />
+          <img src="/Icons/button-icon.svg" alt="" />
           <p className="text-sm font-semibold text-[#030712]">Add note</p>
         </div>
       </div>
@@ -83,7 +80,7 @@ export default function ExpertNote() {
               <th className="px-20 py-4">Details</th>
               <th className="py-4 px-4">Date and Time</th>
               <th className="px-6 py-4">
-                <img src={dropdown} alt="" />
+                <img src="/Icons/Dropdown.svg" alt="" />
               </th>
             </tr>
           </thead>

@@ -1,4 +1,3 @@
-import dropdown from "../../assets/Icons/Dropdown.svg";
 import ProductModal from "./ProductModal";
 import ProductMenu from "./ProductMenu";
 import { useRef, useState } from "react";
@@ -28,7 +27,7 @@ export default function Table({ filteredProduct }) {
                       <th className="px-4 py-6">Created On</th>
                       <th className="px-4 py-6">Payout Status</th>
                       <th className="px-4 py-6">
-                        <img src={dropdown} alt="" />
+                        <img src="/Icons/Dropdown.svg" alt="" />
                       </th>
                     </tr>
                   </thead>

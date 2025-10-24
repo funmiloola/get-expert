@@ -1,6 +1,6 @@
-import plusIcon from "../../assets/Icons/Plus 4.svg";
 import { Outlet, NavLink, useLocation } from "react-router-dom";
 import DashboardHeader from "../../components/DashboardHeader";
+
 export default function ClientSection() {
   const location = useLocation();
   const showExpertBtn = location.pathname === "/home/clients/experts";
@@ -20,7 +20,7 @@ export default function ClientSection() {
                   showExpertBtn ? "block" : "hidden"
                 }`}
               >
-                <img src={plusIcon} alt="" className="w-3 h-3 md:w-6 mid:h-6" />
+                <img src="/Icons/Plus 4.svg" alt="" className="w-3 h-3 md:w-6 mid:h-6" />
                 <span className="font-normal mid:font-semibold text-sm text-white">
                   Add new expert
                 </span>

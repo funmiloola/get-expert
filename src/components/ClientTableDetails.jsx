@@ -1,5 +1,3 @@
-import dropdown from "../assets/Icons/Dropdown.svg";
-
 export default function ClientTableDetail({
   data,
   title,
@@ -21,7 +19,7 @@ export default function ClientTableDetail({
             <th className="px-4 py-6 ">{amount}</th>
             <th className="px-4 py-6 ">{stats}</th>
             <th className="py-4 px-12">
-              <img src={dropdown} alt="" />
+              <img src="/Icons/Dropdown.svg" alt="" />
             </th>
           </tr>
         </thead>

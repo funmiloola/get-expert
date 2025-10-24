@@ -25,7 +25,7 @@ import ReviewSection from "./views/Reports/ReviewSection.jsx";
 import Team from "./views/Team/index.jsx";
 import Settings from "./views/Settings/index.jsx";
 import SettingsProfile from "./views/Settings/SettingsProfile/index.jsx";
-import Password from "./views/SectionDisplay/Password.jsx";
+import Password from "./views/Settings/Password.jsx";
 import Signin from "./views/Signin.jsx";
 import Signup from "./views/Signup.jsx";
 import { ToastContainer } from "react-toastify";

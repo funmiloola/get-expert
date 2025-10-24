@@ -8,8 +8,8 @@ import { filteredByDays } from "../../../components/utils/dateFIlter";
 
 export default function PurchaseSection() {
   const [input, setInput] = useState("");
-  const [filterType, setFilterType] = useState("all")
-  const filteredDate = filteredByDays(filterType,clientPurchases)
+  const [filterType, setFilterType] = useState("all");
+  const filteredDate = filteredByDays(filterType, clientPurchases);
   const filteredTable = filteredDate.filter(({ title }) =>
     title.toLowerCase().includes(input.toLowerCase())
   );

@@ -8,24 +8,24 @@ import { filteredByDays } from "../../components/utils/dateFIlter.js";
 
 export default function Client() {
   const [input, setInput] = useState("");
-  const [filterType,setFilterType] = useState("all")
-  const filteredData = filteredByDays(filterType, clients)
-  const [count, setCount] = useState(1)
-  const [currentTable, setCurrentTable] = useState(0)
+  const [filterType, setFilterType] = useState("all");
+  const filteredData = filteredByDays(filterType, clients);
+  const [count, setCount] = useState(1);
+  const [currentTable, setCurrentTable] = useState(0);
   const filteredTable = filteredData?.[currentTable]?.filter(
     ({ name, email }) =>
       name.toLowerCase().includes(input.toLowerCase()) ||
       email.toLowerCase().includes(input.toLowerCase())
   );
-function handleDisplayTable() {
-    setCurrentTable((prev)=> prev + 1)
-    setCount((prev)=> prev + 1)
+  function handleDisplayTable() {
+    setCurrentTable((prev) => prev + 1);
+    setCount((prev) => prev + 1);
   }
   function handlePrevDisplay() {
-    setCurrentTable((prev) => prev - 1)
-    setCount((prev) => prev - 1 )
+    setCurrentTable((prev) => prev - 1);
+    setCount((prev) => prev - 1);
   }
-  
+
   return (
     <>
       <section>
@@ -43,20 +43,26 @@ function handleDisplayTable() {
           </div>
           <Filter currentFilter={filterType} onChange={setFilterType} />
         </div>
-        <Table filteredTable={filteredTable}  />
+        <Table filteredTable={filteredTable} />
       </section>
       <footer className="pb-3">
         <div className="flex items-center justify-between pt-8">
           <h5 className="text-xs md:text-sm font-medium text-[#414651]">
-            Page {count} of {filteredTable?.length || 0 }
+            Page {count} of {filteredTable?.length || 0}
           </h5>
           <div className="flex items-center gap-3">
-            <button className="px-2 py-1 md:px-4 md:py-2 border border-[#D5D7DA] text-sm font-semibold text-[#414651] rounded-md cursor-pointer" onClick={handlePrevDisplay}
-            disabled={currentTable === 0}>
+            <button
+              className="px-2 py-1 md:px-4 md:py-2 border border-[#D5D7DA] text-sm font-semibold text-[#414651] rounded-md cursor-pointer"
+              onClick={handlePrevDisplay}
+              disabled={currentTable === 0}
+            >
               Previous
             </button>
-            <button className="px-2 py-1 md:px-4 md:py-2 border border-[#D5D7DA] text-sm font-semibold text-[#414651] rounded-md cursor-pointer" onClick={handleDisplayTable}
-            disabled={(currentTable === filteredTable?.length ?? 0) - 1 }>
+            <button
+              className="px-2 py-1 md:px-4 md:py-2 border border-[#D5D7DA] text-sm font-semibold text-[#414651] rounded-md cursor-pointer"
+              onClick={handleDisplayTable}
+              disabled={(currentTable === filteredTable?.length ?? 0) - 1}
+            >
               Next
             </button>
           </div>

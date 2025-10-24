@@ -1,16 +1,17 @@
-import Icon from "../../../assets/Icons/Stroke-1.svg";
-import flag from "../../../assets/Icons/Vector (12).svg";
-import profilePicture from "../../../assets/Images/Avatars (1).svg";
-import starIcon from "../../../assets/Icons/Vector (11).svg";
-
 export default function ExpertReview() {
   const reviews = [
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatars (1).svg",
       username: "@toluUX",
-      flag: flag,
+      flag: "/Icons/Vector (12).svg",
       location: "Lagos, Nigeria",
-      rateIcons: [starIcon, starIcon, starIcon, starIcon, starIcon],
+      rateIcons: [
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+      ],
 
       rating: 5,
       date: "June 3, 2025",
@@ -19,11 +20,17 @@ export default function ExpertReview() {
       duration: "5 weeks",
     },
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatars (1).svg",
       username: "@toluUX",
-      flag: flag,
+      flag: "/Icons/Vector (12).svg",
       location: "Lagos, Nigeria",
-      rateIcons: [starIcon, starIcon, starIcon, starIcon, starIcon],
+      rateIcons: [
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+      ],
 
       rating: 5,
       date: "June 3, 2025",
@@ -43,7 +50,7 @@ export default function ExpertReview() {
           <h3 className="text-sm text-[#030712]">Sort By:</h3>
           <p className="flex gap-2 items-center">
             <span className="text-sm text-[#030712] font-bold">Rating</span>
-            <img src={Icon} alt="" />
+            <img src="/Icons/Stroke-1.svg" alt="" />
           </p>
         </div>
       </div>

@@ -1,8 +1,4 @@
 import { useState } from "react"
-import closeIcon from "../../assets/Icons/Icon (3).svg"
-import image from "../../assets/Images/Frame 427319045.svg"
-import profilePic from "../../assets/Images/Image (5).svg"
-
 export default function ProductModal({onClick}) {
     
     const text = "Navigating business taxes can often feel like a daunting task for many entrepreneurs. Understanding the various tax obligations that come with running a business is crucial for maintaining compliance and avoiding penalties. From income tax to sales tax, each type of tax has its own set of rules and regulations that must be adhered to. It's essential for business owners to familiarize themselves with these requirements to ensure they are meeting their legal obligations while also optimizing their tax situation.One of the first steps in navigating business taxes is to determine the structure of your business. Whether you operate as a sole proprietorship, partnership, corporation, or LLC, each structure has different tax implications. For instance, corporations may face double taxation on profits, while sole proprietors report business income on their personal tax returns. Understanding these distinctions can help you make informed decisions about your business structure and tax strategy.Additionally, keeping accurate records throughout the year can significantly ease the tax filing process. This includes tracking income, expenses, and any deductions you may be eligible for. Utilizing accounting software or hiring a professional accountant can streamline this process and ensure that you are not missing out on potential savings. By staying organized and informed, you can navigate the complexities of business taxes with confidence and focus on growing your enterprise."
@@ -13,10 +9,10 @@ export default function ProductModal({onClick}) {
         <section className="fixed inset-0 bg-black/75 backdrop-blur-sm z-10">
             <div className="bg-white w-70 md:w-137.5  shadow-xl absolute right-8 top-8 rounded-[18px] px-6  py-8">
                 <header>
-                <img src={closeIcon} alt="" className="absolute top-4 right-10 cursor-pointer" onClick={onClick}/>
+                <img src="/Icons/Icon (3).svg" alt="" className="absolute top-4 right-10 cursor-pointer" onClick={onClick}/>
                 </header> 
                 <div>
-                <img src={image} alt=""  className="pt-4"/>
+                <img src="/Images/Frame 427319045.svg" alt=""  className="pt-4"/>
                     <h2 className="text-[18px] mid:text-[20px] font-semibold text-[#030712] pt-6">From Idea to Launch: A Founder’s Handbook</h2>
                     <h3 className="text-base font-semibold pt-6 text-[#030712]">Description</h3>
                     <p className="text-xs text-[#535862] pt-2">{displayText }</p>
@@ -25,7 +21,7 @@ export default function ProductModal({onClick}) {
                 <h4 className="text-base text-[#030712] font-semibold pt-6">Product information</h4>
                 <div className="flex flex-col mid:flex-row gap-2 mid:gap-4 pt-2"> 
                     <div>
-                        <img src={profilePic} alt="" />
+                        <img src="/Images/Image (5).svg" alt="" />
                     </div>
                     <div>
                         <div>

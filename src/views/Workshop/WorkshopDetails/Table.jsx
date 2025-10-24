@@ -1,10 +1,4 @@
 import PageSection from "../../../components/PagesSection"
-import dropdown from "../../../assets/Icons/Dropdown.svg";
-import starIcon from "../../../assets/Icons/Star icon.svg";
-import halfStar from "../../../assets/Icons/Star.svg";
-import arrowDown from "../../../assets/Icons/Vector (13).svg";
-import arrowUp from "../../../assets/Icons/Stroke-1.svg"
-import upDownArrow from "../../../assets/Icons/chevron-selector-vertical.svg";
 import { useState } from "react";
 
 export default function Table() {
@@ -14,16 +8,16 @@ export default function Table() {
           email: "tolu@email.com",
           amount: "₦40,000",
           confirmed: "Yes",
-          rating: [starIcon, starIcon, starIcon, starIcon, halfStar],
-          icon: dropdown,
+          rating: ["/Icons/Star icon.svg", "/Icons/Star icon.svg", "/Icons/Star icon.svg", "/Icons/Star icon.svg", "/Icons/Star.svg"],
+          icon: "/Icons/Dropdown.svg",
         },
         {
           name: "Tolu Ajayi",
           email: "tolu@email.com",
           amount: "₦40,000",
           confirmed: "Yes",
-          rating: [starIcon, starIcon, starIcon, starIcon],
-          icon: dropdown,
+          rating: ["/Icons/Star icon.svg", "/Icons/Star icon.svg", "/Icons/Star icon.svg", "/Icons/Star icon.svg"],
+          icon: "/Icons/Dropdown.svg",
         },
       ];
       const [showAttendees, setShowAttendees] = useState(false);
@@ -38,14 +32,14 @@ export default function Table() {
                   <div>
                     {showAttendees ? (
                       <img
-                        src={arrowDown}
+                        src="/Icons/Vector (13).svg"
                         alt=""
                         onClick={() => setShowAttendees(false)}
                         className="cursor-pointer"
                       />
                     ) : (
                       <img
-                        src={arrowUp}
+                        src="/Icons/Stroke-1.svg"
                         alt=""
                         onClick={() => setShowAttendees(true)}
                         className="cursor-pointer"
@@ -63,35 +57,35 @@ export default function Table() {
                             <th className="text-left py-3 px-4 text-[#717680] text-xs font-semibold">
                               <div className="flex items-center gap-1">
                                 <span>Name</span>
-                                <img src={upDownArrow} alt="" />
+                                <img src="/Icons/chevron-selector-vertical.svg" alt="" />
                               </div>
                             </th>
                             <th className="text-left py-3 px-4 text-[#717680] text-xs font-semibold">
                               <div className="flex items-center gap-1">
                                 <span>Host</span>
-                                <img src={upDownArrow} alt="" />
+                                <img src="/Icons/chevron-selector-vertical.svg" alt="" />
                               </div>
                             </th>
                             <th className="text-left py-3 px-4 text-[#717680] text-xs font-semibold">
                               <div className="flex items-center gap-1">
                                 <span>Paid amount</span>
-                                <img src={upDownArrow} alt="" />
+                                <img src="/Icons/chevron-selector-vertical.svg" alt="" />
                               </div>
                             </th>
                             <th className="text-left py-3 px-4 text-[#717680] text-xs font-semibold">
                               <div className="flex items-center gap-1">
                                 <span>Attended</span>
-                                <img src={upDownArrow} alt="" />
+                                <img src="/Icons/chevron-selector-vertical.svg" alt="" />
                               </div>
                             </th>
                             <th className="text-left py-3 px-4 text-[#717680] text-xs font-semibold">
                               <div className="flex items-center gap-1">
                                 <span>Feedback</span>
-                                <img src={upDownArrow} alt="" />
+                                <img src="/Icons/chevron-selector-vertical.svg" alt="" />
                               </div>
                             </th>
                             <th className="py-3 px-4">
-                              <img src={dropdown} alt="" />
+                              <img src="/Icons/Dropdown.svg" alt="" />
                             </th>
                           </tr>
                         </thead>

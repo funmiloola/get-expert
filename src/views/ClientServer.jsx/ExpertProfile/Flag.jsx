@@ -1,13 +1,9 @@
-import profilePicture from "../../../assets/Images/Avatars (1).svg";
-import Icon from "../../../assets/Icons/Stroke-1.svg";
-import flag from "../../../assets/Icons/Vector (12).svg";
-
 export default function ExpertFlag() {
   const reports = [
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatars (1).svg",
       reportedBy: "@LayoTech",
-      flag: flag,
+      flag:"/Icons/Vector (12).svg",
       location: "Lagos, Nigeria",
       date: "May 30, 2025",
       comment: `"This consultant misrepresented what was in the product."`,
@@ -16,9 +12,9 @@ export default function ExpertFlag() {
       actions: ["View Details", "Dismiss Report", "Warn Consultant"],
     },
     {
-      profilePicture: profilePicture,
+      profilePicture: "/Images/Avatars (1).svg",
       reportedBy: "@LayoTech",
-      flag: flag,
+      flag: "/Icons/Vector (12).svg",
       location: "Lagos, Nigeria",
       date: "May 30, 2025",
       comment: `"This consultant misrepresented what was in the product."`,
@@ -36,7 +32,7 @@ export default function ExpertFlag() {
           <span className="text-sm font-bold text-[#030712]">
             Most relevant
           </span>
-          <img src={Icon} alt="" />
+          <img src="/Icons/Stroke-1.svg" alt="" />
         </div>
       </div>
       <div className="flex flex-col gap-4 py-6">

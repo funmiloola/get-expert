@@ -1,8 +1,4 @@
 import { useState } from "react";
-import avatar from "../assets/Icons/Avatars.svg";
-import logoutIcon from "../assets/Icons/Logout.svg";
-import hamburgerIcon from "../assets/Icons/hamburger-menu-more-svgrepo-com (1).svg";
-import closeIcon from "../assets/Icons/icons8-close.svg";
 import { menuItems, menuSettings } from "../data";
 import { Link, useLocation,useNavigate } from "react-router-dom";
 import { auth } from "../firebase/firebase";
@@ -30,7 +26,7 @@ export default function Sidebar() {
     <div className="font-sans px-0 mid:px-2  lg:px-8">
       <aside className="block mid:hidden">
         <img
-          src={hamburgerIcon}
+          src="/Icons/hamburger-menu-more-svgrepo-com (1).svg"
           alt=""
           className="w-7 h-7 "
           onClick={handleOpenSidebar}
@@ -45,7 +41,7 @@ export default function Sidebar() {
       >
         <div className="flex flex-col gap-20 justify-between">
           <img
-            src={closeIcon}
+            src="/Icons/icons8-close.svg"
             alt=""
             className="absolute top-2 right-4 mid:hidden border border-gray-300 px-1 py-0.25 rounded-md cursor-pointer"
             onClick={handleCloseSidebar}
@@ -103,7 +99,7 @@ export default function Sidebar() {
         </div>
         <div className="flex gap-3 items-center pt-2 mid:pt-4.25">
           <img
-            src={avatar}
+            src="/Icons/Avatars.svg"
             alt="avatar"
             className="cursor-pointer w-6 h-6 lg:w-12 lg:h-12"
           />
@@ -116,7 +112,7 @@ export default function Sidebar() {
             </p>
           </div>
           <img
-            src={logoutIcon}
+            src="/Icons/Logout.svg"
             alt="logout-icon"
             className="cursor-pointer block mid:hidden lg:block"
             onClick={()=> setOpenLogoutModal(!openLogoutModal)}

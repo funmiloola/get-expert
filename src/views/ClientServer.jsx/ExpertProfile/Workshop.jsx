@@ -3,7 +3,6 @@ import { useOnClickOutside } from "usehooks-ts";
 import Input from "../../../components/Input";
 import Filter from "../../../components/filter";
 import PageSection from "../../../components/PagesSection";
-import dropdown from "../../../assets/Icons/Dropdown.svg";
 import ClientDropdownMenu from "../../../components/clientdropdownMenu";
 import { filteredByDays } from "../../../components/utils/dateFIlter";
 
@@ -17,7 +16,7 @@ export default function ExpertWorkshop() {
       price: "₦5,000 per seat",
       status: "Upcoming",
       rating: "-",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       productName: "Pricing for Consultants",
@@ -26,7 +25,7 @@ export default function ExpertWorkshop() {
       price: "₦5,000 per seat",
       status: "Upcoming",
       rating: "-",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       productName: "Pricing for Consultants",
@@ -35,7 +34,7 @@ export default function ExpertWorkshop() {
       price: "₦5,000 per seat",
       status: "Cancelled",
       rating: "N/A",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       productName: "Pricing for Consultants",
@@ -44,7 +43,7 @@ export default function ExpertWorkshop() {
       price: "₦5,000 per seat",
       status: "Cancelled",
       rating: "N/A",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       productName: "Pricing for Consultants",
@@ -53,7 +52,7 @@ export default function ExpertWorkshop() {
       price: "₦5,000 per seat",
       status: "Completed",
       rating: "4.6",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
   ];
   const [filterType, setFilterType] = useState("all")
@@ -88,7 +87,7 @@ export default function ExpertWorkshop() {
               <th className="px-4  py-6">Status</th>
               <th className="px-4  py-6 ">Review</th>
               <th className="px-4  py-6">
-                <img src={dropdown} alt="" />
+                <img src="/Icons/Dropdown.svg" alt="" />
               </th>
             </tr>
           </thead>

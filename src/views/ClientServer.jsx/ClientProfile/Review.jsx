@@ -1,9 +1,13 @@
-import Icon from "../../../assets/Icons/Stroke-1.svg";
-import starIcon from "../../../assets/Icons/Vector (11).svg";
 export default function Review() {
   const reviews = [
     {
-      icons: [starIcon, starIcon, starIcon, starIcon, starIcon],
+      icons: [
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+      ],
       rating: 5,
       date: "June 3, 2025",
       text: `"Loved the templates. Super clear instructions and easy to use."`,
@@ -11,7 +15,13 @@ export default function Review() {
       template: "Client Strategy Template",
     },
     {
-      icons: [starIcon, starIcon, starIcon, starIcon, starIcon],
+      icons: [
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+        "/Icons/Vector (11).svg",
+      ],
       rating: 5,
       date: "May 12, 2025",
       text: `"Very helpful for planning. Saved me so much time!"`,
@@ -29,7 +39,7 @@ export default function Review() {
           <h3 className="text-sm text-[#030712]">Sort By:</h3>
           <p className="flex gap-2 items-center">
             <span className="text-sm text-[#030712] font-bold">Rating</span>
-            <img src={Icon} alt="" />
+            <img src="/Icons/Stroke-1.svg" alt="" />
           </p>
         </div>
       </div>

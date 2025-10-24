@@ -1,30 +1,27 @@
-import plusIcon from "../../../assets/Icons/button-icon.svg";
-import dropdown from "../../../assets/Icons/Dropdown.svg";
-import profilePicture from "../../../assets/Images/Avatar.svg";
 import PageSection from "../../../components/PagesSection";
 
 export default function Note() {
   const adminReports = [
     {
-      img: profilePicture,
+      img:"/Images/Avatar.svg",
       adminName: "Alison Ogaga",
       note: "User received 1 refund this month for a duplicate purchase",
       datePublished: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
-      img: profilePicture,
+      img: "/Images/Avatar.svg",
       adminName: "Jennifer Johnson",
       note: "Frequent buyer. Engages in the forum",
       datePublished: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
-      img: profilePicture,
+      img: "/Images/Avatar.svg",
       adminName: "Samuel Smith",
       note: "Warned once in April for abusive language — no follow-ups since.",
       datePublished: "Apr 12, 2023 | 09:32AM",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
   ];
 
@@ -33,7 +30,7 @@ export default function Note() {
       <div className="flex justify-between ">
         <h2 className="text-lg font-bold text-[#030712]">Notes</h2>
         <div className="flex gap-2 items-center border border-[#C9D0D8] rounded-lg px-6.5 py-2 cursor-pointer">
-          <img src={plusIcon} alt="" />
+          <img src="/Icons/button-icon.svg" alt="" />
           <p className="text-sm font-semibold text-[#030712]">Add note</p>
         </div>
       </div>
@@ -58,7 +55,7 @@ export default function Note() {
               <th className="px-20 py-4">Date Published</th>
               <th className="py-4 px-4">Date and time</th>
               <th className="px-6 py-4">
-                <img src={dropdown} alt="" />
+                <img src="/Icons/Dropdown.svg" alt="" />
               </th>
             </tr>
           </thead>

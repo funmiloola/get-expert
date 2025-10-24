@@ -1,4 +1,3 @@
-import dropdown from "../../assets/Icons/Dropdown.svg";
 import { useRef, useState } from "react";
 import Input from "../../components/Input";
 import PageSection from "../../components/PagesSection";
@@ -16,7 +15,7 @@ export default function ReportSection() {
       reason: "Misleading info",
       dateSubmitted: "Apr 12, 2023",
       status: "Open",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       reportType: "Workshop",
@@ -26,7 +25,7 @@ export default function ReportSection() {
       reason: "Misleading info",
       dateSubmitted: "Apr 24, 2023",
       status: "Resolved",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       reportType: "Comment",
@@ -36,7 +35,7 @@ export default function ReportSection() {
       reason: "Misleading info",
       dateSubmitted: "Apr 25, 2023",
       status: "Escalated",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       reportType: "Product",
@@ -46,21 +45,21 @@ export default function ReportSection() {
       reason: "Misleading info",
       dateSubmitted: "Apr 29, 2023",
       status: "Resolved",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
   ];
   const [input, setInput] = useState("");
   const filteredReport = reports.filter(({ reportedItem }) =>
     reportedItem.toLowerCase().includes(input.toLowerCase())
   );
-    const [openOptions, setOpenOptions] = useState(null);
-    const [openModal, setOpenModal] = useState(false)
-    const handleModal = () => {
-        setOpenModal(true)
-        setOpenOptions(false)
-  }
-  const dropdownRef = useRef()
-  useOnClickOutside(dropdownRef,()=> setOpenOptions(null))
+  const [openOptions, setOpenOptions] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
+  const handleModal = () => {
+    setOpenModal(true);
+    setOpenOptions(false);
+  };
+  const dropdownRef = useRef();
+  useOnClickOutside(dropdownRef, () => setOpenOptions(null));
   return (
     <>
       <div className="w-full mid:w-1/2 pt-8">
@@ -82,24 +81,30 @@ export default function ReportSection() {
               <th className="px-2 py-6">Date Submitted</th>
               <th className="px-3 py-6">Status</th>
               <th className="px-3 py-6">
-                <img src={dropdown} alt="" />
+                <img src="/Icons/Dropdown.svg" alt="" />
               </th>
             </tr>
           </thead>
           <tbody>
             {filteredReport.length > 0 ? (
               filteredReport.map(
-                ({
-                  reportType,
-                  reportedItem,
-                  reportedBy,
-                  against,
-                  reason,
-                  dateSubmitted,
-                  status,
-                  icon,
-                },index) => (
-                  <tr key={index} className="text-left border-b border-b-[#E9EAEB] font-medium text-sm text-[#030712]">
+                (
+                  {
+                    reportType,
+                    reportedItem,
+                    reportedBy,
+                    against,
+                    reason,
+                    dateSubmitted,
+                    status,
+                    icon,
+                  },
+                  index
+                ) => (
+                  <tr
+                    key={index}
+                    className="text-left border-b border-b-[#E9EAEB] font-medium text-sm text-[#030712]"
+                  >
                     <td className="px-2 py-6">{reportType}</td>
                     <td className="px-2 py-6">{reportedItem}</td>
                     <td className="px-2 py-6">{reportedBy}</td>
@@ -112,25 +117,32 @@ export default function ReportSection() {
                           status === "Resolved"
                             ? "text-[#067647] border-[#ABEFC6] bg-[#ECFDF3]"
                             : null
-                                      } ${
-                                      status === "Open" ? "text-[#B54708] border-[#FEDF89] bg-[#FFFAEB]":null
-                        }  ${status === "Escalated" ? "text-[#B42318] border-[#FECDCA] bg-[#FEF3F2]":null}`}
+                        } ${
+                          status === "Open"
+                            ? "text-[#B54708] border-[#FEDF89] bg-[#FFFAEB]"
+                            : null
+                        }  ${
+                          status === "Escalated"
+                            ? "text-[#B42318] border-[#FECDCA] bg-[#FEF3F2]"
+                            : null
+                        }`}
                       >
-                       {status}
+                        {status}
                       </span>
                     </td>
                     <td className="px-4 py-6 cursor-pointer min-w-[88px] relative">
                       <img
                         src={icon}
                         alt=""
-                        onClick={() => setOpenOptions(openOptions === index ? null:index)}
+                        onClick={() =>
+                          setOpenOptions(openOptions === index ? null : index)
+                        }
                       />
                       {openOptions === index && (
-        <div ref={dropdownRef}>
-          <ReportMenu onClick={handleModal} />
-        </div>    
-          )
-          }
+                        <div ref={dropdownRef}>
+                          <ReportMenu onClick={handleModal} />
+                        </div>
+                      )}
                     </td>
                   </tr>
                 )
@@ -141,11 +153,7 @@ export default function ReportSection() {
           </tbody>
         </table>
       </div>
-          {
-              openModal && (
-                  <ReportModal onClick={ ()=> setOpenModal(false)} />
-              )
-          }
+      {openModal && <ReportModal onClick={() => setOpenModal(false)} />}
       <PageSection />
     </>
   );

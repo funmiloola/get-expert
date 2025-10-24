@@ -1,52 +1,45 @@
-import arrow from "../../assets/Icons/arrow-up-right.svg";
-import userIcon from "../../assets/Icons/user.svg";
-import bagIcon from "../../assets/Icons/Bag.svg";
-import pdfIcon from "../../assets/Icons/Document pdf.svg";
-import gIcon from "../../assets/Icons/Graduated.svg";
-import tIcon from "../../assets/Icons/Bank Card.svg";
-import reportIcon from "../../assets/Icons/Danger 3.svg";
 export default function Card() {
      const cards = [
       {
-        icon: userIcon,
+        icon: "/Icons/user.svg",
         title: "Total Registered Users",
         figure: "6,124",
-        img: arrow,
+        img:"/Icons/arrow-up-right.svg",
         per: "100%",
       },
       {
-        icon: bagIcon,
+        icon: "/Icons/Bag.svg",
         title: "Total Workshops Hosted",
         figure: "812",
-        img: arrow,
+        img: "/Icons/arrow-up-right.svg",
         per: "100%",
       },
       {
-        icon: pdfIcon,
+        icon: "/Icons/Document pdf.svg",
         title: "Total Products Published",
         figure: "2,139",
-        img: arrow,
+        img: "/Icons/arrow-up-right.svg",
         per: "100%",
       },
       {
-        icon: gIcon,
+        icon: "/Icons/Graduated.svg",
         title: "Total Workshops Hosted",
         figure: "318",
-        img: arrow,
+        img: "/Icons/arrow-up-right.svg",
         per: "100%",
       },
       {
-        icon: tIcon,
+        icon: "/Icons/Bank Card.svg",
         title: "Pending Payout Requests",
         figure: "21",
-        img: arrow,
+        img: "/Icons/arrow-up-right.svg",
         per: "100%",
       },
       {
-        icon: reportIcon,
+        icon: "/Icons/Danger 3.svg",
         title: "Active Reports",
         figure: "6",
-        img: arrow,
+        img: "/Icons/arrow-up-right.svg",
         per: "100%",
       },
     ];

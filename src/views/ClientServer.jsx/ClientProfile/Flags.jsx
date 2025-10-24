@@ -1,5 +1,3 @@
-import Icon from "../../../assets/Icons/Stroke-1.svg";
-
 export default function Flag() {
   const reports = [
     {
@@ -27,7 +25,7 @@ export default function Flag() {
           <span className="text-sm font-bold text-[#030712]">
             Most relevant
           </span>
-          <img src={Icon} alt="" />
+          <img src="/Icons/Stroke-1.svg" alt="" />
         </div>
       </div>
       <div className="flex flex-col gap-6 pt-6">

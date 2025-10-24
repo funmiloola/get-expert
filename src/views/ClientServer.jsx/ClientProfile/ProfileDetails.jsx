@@ -1,22 +1,23 @@
-import profilePicture from "../../../assets/Images/Content.svg";
-import flag from "../../../assets/Icons/Vector (9).svg";
-import deleteIcon from "../../../assets/Icons/Delete.svg";
-import dropdownIcon from "../../../assets/Icons/Dropdown.svg";
 import ClientDropdownMenu from "../../../components/clientdropdownMenu";
 import { useRef, useState } from "react";
 import { useOnClickOutside } from "usehooks-ts";
 
 export default function ProfileDetails() {
-  const items = ['Suspend', 'Send Message', 'Refund Eligibility', 'Upgrade to Consultant']
-  const [openDropdown, setOpenDropdown] = useState(false)
-  const dropdownRef = useRef()
-  useOnClickOutside(dropdownRef,()=> setOpenDropdown(false))
+  const items = [
+    "Suspend",
+    "Send Message",
+    "Refund Eligibility",
+    "Upgrade to Consultant",
+  ];
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const dropdownRef = useRef();
+  useOnClickOutside(dropdownRef, () => setOpenDropdown(false));
   return (
     <section className="border border-[#DBE8FE] rounded-xl ml-3 mt-1 mid:ml-0 mid:mt-0 py-2 mid:py-6 mid:pr-6 ">
       <div className="flex flex-col mid:flex-row px-4 pb-2 mid:px-0 mid:pb-0 gap-0 xl:gap-8 items-start">
         <div>
           <img
-            src={profilePicture}
+            src="/Images/Content.svg"
             alt=""
             className="w-16 h-16 lg:w-36 lg:h-36"
           />
@@ -70,7 +71,11 @@ export default function ProfileDetails() {
                   Country
                 </p>
                 <div className="flex gap-3 items-center">
-                  <img src={flag} alt="" className="rounded-full" />
+                  <img
+                    src="/Icons/Vector (9).svg"
+                    alt=""
+                    className="rounded-full"
+                  />
                   <span className="font-semibold text-[#030712] text-xs mid:text-base">
                     Lagos, Nigeria
                   </span>
@@ -80,23 +85,27 @@ export default function ProfileDetails() {
           </div>
           <div className="flex gap-3">
             <button className="flex items-center gap-2 py-1 mid:py-2 px-4 mid:px-10 bg-[#DC2626] rounded-lg cursor-pointer">
-              <img src={deleteIcon} alt="" />
+              <img src="/Icons/Delete.svg" alt="" />
               <span className="font-semibold text-white text-[10px] mid:text-sm">
                 {" "}
                 Delete
               </span>
             </button>
             <div className="px-1 py-1 mid:px-3.25 mid:py-2 border border-[#D0D5DD] rounded-lg cursor-pointer">
-              <img src={dropdownIcon} alt="" className="relative" onClick={() => setOpenDropdown(!openDropdown)} />
+              <img
+                src="/Icons/Dropdown.svg"
+                alt=""
+                className="relative"
+                onClick={() => setOpenDropdown(!openDropdown)}
+              />
             </div>
-            
           </div>
         </div>
       </div>
       {openDropdown && (
         <div ref={dropdownRef}>
           <ClientDropdownMenu menuItems={items} className="right-8 top-48" />
-          </div>
+        </div>
       )}
     </section>
   );

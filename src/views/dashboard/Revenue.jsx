@@ -1,5 +1,3 @@
-import arrow from "../../assets/Icons/arrow-up-right.svg";
-import totalIcon from "../../assets/Icons/Icon (1).svg";
 import DashboardFilter from "./DashboardFilter";
 import { Bar } from "react-chartjs-2";
 import {
@@ -22,7 +20,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
 
 const getConfigValues = () => {
   const width = window.innerWidth;
@@ -94,35 +91,34 @@ const options = {
   },
 };
 export default function Revenue() {
-  const [selected,setSelected] = useState("all")
-    return (
-        <section>
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between sm:items-center pt-12">
-                 <div className="flex gap-1 items-center">
-                   <h2 className="text-sm text-[#535862] font-semibold">
-                     Total revenue
-                   </h2>
-                   <img src={totalIcon} alt="" className="cursor-pointer" />
-                 </div>
-                 <div>
-                   <DashboardFilter selected={ selected} onChange={setSelected} />
-                   
-                 </div>
-               </div>
-               <div className="flex pt-4 sm:pt-0 gap-3 items-center">
-                 <p className="text-[#181D27]text-lg mid:text-3xl font-semibold">
-                   ₦24.6M
-                 </p>
-                 <div className="flex gap-1 items-center border border-[#D5D7DA] rounded-md px-1.5 mid:py-1">
-                   <img src={arrow} alt="" />
-                   <span className="text-xs mid:text-sm font-medium text-[#414651]">
-                     2.4%
-                   </span>
-                 </div>
-               </div>
-               <div className="w-full h-[300px]">
-                 <Bar data={data} options={options} />
-            </div>
-            </section>
-    )
+  const [selected, setSelected] = useState("all");
+  return (
+    <section>
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between sm:items-center pt-12">
+        <div className="flex gap-1 items-center">
+          <h2 className="text-sm text-[#535862] font-semibold">
+            Total revenue
+          </h2>
+          <img src="/Icons/Icon (1).svg" alt="" className="cursor-pointer" />
+        </div>
+        <div>
+          <DashboardFilter selected={selected} onChange={setSelected} />
+        </div>
+      </div>
+      <div className="flex pt-4 sm:pt-0 gap-3 items-center">
+        <p className="text-[#181D27]text-lg mid:text-3xl font-semibold">
+          ₦24.6M
+        </p>
+        <div className="flex gap-1 items-center border border-[#D5D7DA] rounded-md px-1.5 mid:py-1">
+          <img src="/Icons/arrow-up-right.svg" alt="" />
+          <span className="text-xs mid:text-sm font-medium text-[#414651]">
+            2.4%
+          </span>
+        </div>
+      </div>
+      <div className="w-full h-[300px]">
+        <Bar data={data} options={options} />
+      </div>
+    </section>
+  );
 }

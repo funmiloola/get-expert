@@ -1,26 +1,25 @@
 import ProfileDetails from "./ProfileDetails";
 import ClientCardGrid from "../../../components/ClientCardgrid";
-import upgreenArrow from "../../../assets/Icons/arrow-up.svg";
-import downredArrow from "../../../assets/Icons/arrow-down.svg";
 import { NavLink, Outlet } from "react-router-dom";
+
 export default function ExpertProfileSection() {
   const dashboardStats = [
     {
       title: "Total Earnings",
       value: "₦235,000",
-      icon: downredArrow,
+      icon: "/Icons/arrow-down.svg",
       change: "100%",
     },
     {
       title: "Products Sold",
       value: "20",
-      icon: upgreenArrow,
+      icon: "/Icons/arrow-up.svg",
       change: "100%",
     },
     {
       title: "Workshops Hosted",
       value: "6",
-      icon: upgreenArrow,
+      icon: "/Icons/arrow-up.svg",
       change: "100%",
     },
   ];

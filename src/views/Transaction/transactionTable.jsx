@@ -1,5 +1,4 @@
 import TransactionMenu from "./TransactionMenu"
-import dropdown from "../../assets/Icons/Dropdown.svg";
 import TransactionModal from "./TransactionModal";
 import PageSection from "../../components/PagesSection";
 import { useState, useRef } from "react";
@@ -16,7 +15,7 @@ export default function TransactionTable() {
           date: "Apr 12, 2023",
           status: "Escrow",
           payoutStatus: "Pending",
-          icon: dropdown,
+          icon: "/Icons/Dropdown.svg",
         },
         {
           transactionId: "TXN_203194",
@@ -27,7 +26,7 @@ export default function TransactionTable() {
           date: "Apr 24, 2023",
           status: "Paid",
           payoutStatus: "Approved",
-          icon: dropdown,
+          icon: "/Icons/Dropdown.svg",
         },
         {
           transactionId: "TXN_203194",
@@ -38,7 +37,7 @@ export default function TransactionTable() {
           date: "Apr 25, 2023",
           status: "Requested",
           payoutStatus: "On Hold",
-          icon: dropdown,
+          icon: "/Icons/Dropdown.svg",
         },
         {
           transactionId: "TXN_203194",
@@ -49,7 +48,7 @@ export default function TransactionTable() {
           date: "Apr 29, 2023",
           status: "Refunded",
           payoutStatus: "Approved",
-          icon: dropdown,
+          icon: "/Icons/Dropdown.svg",
         },
       ];
 
@@ -95,7 +94,7 @@ export default function TransactionTable() {
                         Payout Status
                       </th>
                       <th className="py-3 px-4">
-                        <img src={dropdown} alt="" />
+                        <img src="/Icons/Dropdown.svg" alt="" />
                       </th>
                     </tr>
                   </thead>

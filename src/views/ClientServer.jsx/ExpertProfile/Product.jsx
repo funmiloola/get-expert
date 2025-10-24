@@ -3,7 +3,6 @@ import { useOnClickOutside } from "usehooks-ts";
 import Input from "../../../components/Input";
 import Filter from "../../../components/filter";
 import PageSection from "../../../components/PagesSection";
-import dropdown from "../../../assets/Icons/Dropdown.svg";
 import ClientDropdownMenu from "../../../components/clientdropdownMenu";
 import { filteredByDays } from "../../../components/utils/dateFIlter";
 export default function Product() {
@@ -15,7 +14,7 @@ export default function Product() {
       totalRevenue: 245000,
       rating: 4.6,
       status: "Published",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       productName: "Client Strategy Template",
@@ -24,7 +23,7 @@ export default function Product() {
       totalRevenue: 245000,
       rating: 4.8,
       status: "Published",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       productName: "Client Strategy Template",
@@ -33,7 +32,7 @@ export default function Product() {
       totalRevenue: 245000,
       rating: 3.8,
       status: "Suspended",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       productName: "Client Strategy Template",
@@ -42,7 +41,7 @@ export default function Product() {
       totalRevenue: 245000,
       rating: 4.6,
       status: "Draft",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
     {
       productName: "Client Strategy Template",
@@ -51,7 +50,7 @@ export default function Product() {
       totalRevenue: 245000,
       rating: 4.0,
       status: "Draft",
-      icon: dropdown,
+      icon: "/Icons/Dropdown.svg",
     },
   ];
  const items =['View',"Unpublish","Edit","Flag"]
@@ -88,7 +87,7 @@ useOnClickOutside(dropdownRef, () => setOpenDropdown(null));
               <th className="px-4  py-6 ">Rating</th>
               <th className="px-5  py-6 ">Status</th>
               <th className="px-2  py-6 ">
-                <img src={dropdown} alt="" />
+                <img src="/Icons/Dropdown.svg" alt="" />
               </th>
             </tr>
           </thead>
