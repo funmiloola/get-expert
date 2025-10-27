@@ -48,7 +48,7 @@ export default function Client() {
       <footer className="pb-3">
         <div className="flex items-center justify-between pt-8">
           <h5 className="text-xs md:text-sm font-medium text-[#414651]">
-            Page {count} of {filteredTable?.length || 0}
+            Page {count} of {filteredTable?.length}
           </h5>
           <div className="flex items-center gap-3">
             <button
@@ -61,7 +61,7 @@ export default function Client() {
             <button
               className="px-2 py-1 md:px-4 md:py-2 border border-[#D5D7DA] text-sm font-semibold text-[#414651] rounded-md cursor-pointer"
               onClick={handleDisplayTable}
-              disabled={(currentTable === filteredTable?.length ?? 0) - 1}
+              disabled={currentTable === filteredTable?.length - 1}
             >
               Next
             </button>
