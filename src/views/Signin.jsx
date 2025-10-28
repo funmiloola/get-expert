@@ -2,7 +2,7 @@ import InputField from "../components/inputField";
 import { useForm } from "react-hook-form";
 import { auth } from "../firebase/firebase";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword,sendPasswordResetEmail} from "firebase/auth";
 import { toast } from "react-toastify";
 export default function Signin() {
   const navigate = useNavigate();
@@ -12,7 +12,6 @@ export default function Signin() {
     formState: { isSubmitting, errors },
     getValues,
   } = useForm();
-
   const login = async () => {
     const email = getValues("email");
     const password = getValues("password");
@@ -23,11 +22,26 @@ export default function Signin() {
       return { success: false, errorMessage: error.code };
     }
   };
+  const forgotPassword = async () => {
+    const email = getValues("email")
+    if (!email) return toast.error("Enter a valid email")
+    try {
+      await sendPasswordResetEmail(auth, email)
+      return toast.success("Email sent successfully")
+    }
+    catch (error) {
+   const errorMessage = error.code;
+      toast.error(errorMessage || "Something went wrong")
+    }
+}
   const errorMsg = async () => {
     const response = await login();
     try {
       const message = response.errorMessage.replaceAll("_", " ");
-      if (message === "auth/invalid-email"|| message === "auth/invalid-login-credentials") {
+      if (
+        message === "auth/invalid-email" ||
+        message === "auth/invalid-login-credentials"
+      ) {
         return "Invalid Login Credentials ";
       } else if (message === "auth/network-request-failed") {
         return "Network Failed Try again!";
@@ -102,35 +116,37 @@ export default function Signin() {
             )}
           </div>
 
-          <p className="cursor-pointer text-[#1E55AF] text-center text-base font-semibold">
+          <p className="cursor-pointer text-[#1E55AF] text-center text-base font-semibold" onClick={()=>forgotPassword()}>
             Forgout Password?
           </p>
           <button
             type="submit"
-                      className="w-full lg:w-full flex justify-center items-center gap-2 py-2 bg-[#1E55AF] border border-[#1E55AF] text-white font-semibold rounded-md cursor-pointer disabled:bg-gray-300 disabled:border-gray-300"
-                      disabled={isSubmitting}
+            className="w-full lg:w-full flex justify-center items-center gap-2 py-2 bg-[#1E55AF] border border-[#1E55AF] text-white font-semibold rounded-md cursor-pointer disabled:bg-gray-300 disabled:border-gray-300"
+            disabled={isSubmitting}
           >
-                      <span>Login</span>
-                        {isSubmitting ? (<svg
-      className="mr-3 -ml-1 size-5 animate-spin text-white"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-    >
-      <circle
-        className="opacity-25"
-        cx="12"
-        cy="12"
-        r="10"
-        stroke="currentColor"
-        strokeWidth="4"
-      ></circle>
-      <path
-        className="opacity-75"
-        fill="currentColor"
-        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-      ></path>
-    </svg>):null}  
+            <span>Login</span>
+            {isSubmitting ? (
+              <svg
+                className="mr-3 -ml-1 size-5 animate-spin text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            ) : null}
           </button>
         </form>
         <p className="text-gray-700">
