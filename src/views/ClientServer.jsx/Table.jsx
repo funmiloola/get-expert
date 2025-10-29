@@ -82,11 +82,11 @@ export default function Table({ filteredTable }) {
                       {status}
                     </span>
                   </td>
-                  <td className="py-6 relative  px-4 cursor-pointer min-w-[85px]">
+                  <td className="py-6 relative  px-4 cursor-pointer min-w-[85px] ">
                     <img
                       src={menu}
                       alt=""
-                      className=""
+                      className="hover:bg-gray-200 hover:rounded-sm"
                       onClick={() =>
                         setOpenOptions(openOptions === index ? null : index)
                       }
@@ -102,7 +102,9 @@ export default function Table({ filteredTable }) {
             )
           ) : (
             <tr>
-              <td>No result found</td>
+                <td colSpan="8" className="text-center pt-4">
+                 No results found
+                </td>
             </tr>
           )}
         </tbody>

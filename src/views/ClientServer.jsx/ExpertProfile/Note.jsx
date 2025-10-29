@@ -54,7 +54,7 @@ export default function ExpertNote() {
     <section className="font-sans pt-8 md:px-3">
       <div className="flex justify-between ">
         <h2 className="text-lg font-bold text-[#030712]">Notes</h2>
-        <div className="flex gap-2 items-center border border-[#C9D0D8] rounded-lg px-6.5 py-2 cursor-pointer">
+        <div className="flex gap-2 items-center border border-[#C9D0D8] rounded-lg px-6.5 py-2 cursor-pointer hover:bg-[#FAFAFA]">
           <img src="/Icons/button-icon.svg" alt="" />
           <p className="text-sm font-semibold text-[#030712]">Add note</p>
         </div>
@@ -69,7 +69,7 @@ export default function ExpertNote() {
         />
         <p className="text-sm text-[#414651] font-medium">433/600 characters</p>
       </div>
-      <button className="bg-[#667185] text-white text-sm px-10.25 py-2 rounded-md cursor-pointer">
+      <button className="bg-[#667185] text-white text-sm px-10.25 py-2 rounded-md cursor-pointer hover:bg-blue-500">
         Add
       </button>
       <div className="flex flex-col gap-2 pb-6">

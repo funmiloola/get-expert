@@ -142,7 +142,7 @@ useOnClickOutside(dropdownRef, () => setOpenDropdown(null));
                       </span>{" "}
                     </td>
                     <td className=" py-6 px-2 min-w-[65px] cursor-pointer relative">
-                      <img src={icon} alt="" onClick={() => setOpenDropdown(openDropdown === index ? null : index)} />
+                      <img src={icon} alt="" className="hover:bg-[#E9EAEB] hover:rounded-sm" onClick={() => setOpenDropdown(openDropdown === index ? null : index)} />
                       {openDropdown === index && (
                         <div ref={dropdownRef}>
                         <ClientDropdownMenu menuItems={items} className="bottom-0 right-8"/>
@@ -155,7 +155,9 @@ useOnClickOutside(dropdownRef, () => setOpenDropdown(null));
                 )
               )
             ) : (
-              <p>No results found</p>
+                <tr>
+                    <td colSpan="8" className=" text-center pt-4">No results found</td>
+                </tr>
             )}
           </tbody>
         </table>

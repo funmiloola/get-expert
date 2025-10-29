@@ -134,6 +134,7 @@ export default function ReportSection() {
                       <img
                         src={icon}
                         alt=""
+                        className="hover:bg-[#E9EAEB] hover:rounded-sm"
                         onClick={() =>
                           setOpenOptions(openOptions === index ? null : index)
                         }
@@ -148,7 +149,10 @@ export default function ReportSection() {
                 )
               )
             ) : (
-              <p>No results Found</p>
+                <tr>
+                   <td colSpan="8"  className="text-center pt-4">No results Found</td>
+                </tr>
+             
             )}
           </tbody>
         </table>

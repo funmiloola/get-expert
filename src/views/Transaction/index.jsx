@@ -30,7 +30,7 @@ export default function Transactions() {
     },
   ];
   return (
-    <>
+    <section className="pb-10">
       <h2 className="text-[#181D27] text-xl mid:text-2xl font-bold pl-2 mid:pl-0">
         Transactions
       </h2>
@@ -40,6 +40,6 @@ export default function Transactions() {
       />
       <TransactionTable />
       <PayoutTable />
-    </>
+    </section>
   );
 }

@@ -13,7 +13,7 @@ export default function Input({ placeholder, input, onChange }) {
           onChange={onChange}
         />
       </div>
-      <div className="border border-[#D0D5DD] px-4 py-2.5 rounded-md cursor-pointer">
+      <div className="border border-[#D0D5DD] px-4 py-2.5 rounded-md cursor-pointer hover:bg-[#E9EAEB]">
         <img src="/Icons/Container.svg" alt="" />
       </div>
     </section>

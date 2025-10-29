@@ -30,7 +30,7 @@ export default function ClientProfileSection() {
               className={({ isActive }) =>
                 isActive
                   ? "border-b-2 border-b-[#1E55AF] pb-4  text-[#1E55AF]"
-                  : ""
+                  : "hover:border-b-2 hover:border-b-[#1E55AF] hover:pb-4  hover:text-[#1E55AF]"
               }
             >
               {({ isActive }) => (

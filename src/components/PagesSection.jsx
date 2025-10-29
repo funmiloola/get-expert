@@ -1,8 +1,8 @@
 export default function PageSection() {
   const pages = ["1", "2", "3", '/Icons/Number.svg', "8", "9", "10"];
   return (
-    <footer className="flex items-center justify-between pr-5 pt-8.25">
-      <div className="flex gap-1 items-center cursor-pointer border border-[#C9C0D8] rounded-md px-1 py-0.5 mid:px-3 mid:py-2">
+    <footer className="flex items-center justify-between pr-5 pt-8.25 pb-8">
+      <div className="flex gap-1 items-center cursor-pointer border border-[#C9C0D8] rounded-md px-1 py-0.5 mid:px-3 mid:py-2 hover:bg-gray-200 ">
         <img src="/Icons/arrow-left.svg" alt="" />
         <span className="text-sm text-[#414651]  mid:font-semibold">
           Previous
@@ -14,14 +14,14 @@ export default function PageSection() {
             {index === 3 ? (
               <img src={page} />
             ) : (
-              <span className="text-xs md:text-sm text-[#717680]">{page}</span>
+              <span className="text-xs md:text-sm text-[#717680] hover:text-[#3B82F6]">{page}</span>
             )}
           </li>
         ))}
       </ul>
-      <div className="flex gap-1 items-center cursor-pointer border border-[#C9C0D8] rounded-md px-1 py-0.5 mid:px-3 mid:py-2">
+      <div className="flex gap-1 items-center cursor-pointer border border-[#C9C0D8] rounded-md px-1 py-0.5 mid:px-3 mid:py-2 hover:bg-gray-200">
         <img src="/Icons/arrow-right.svg" alt="" />
-        <span className="text-sm text-[#414651]  mid:font-semibold">Next</span>
+        <span className="text-sm text-[#414651] mid:font-semibold">Next</span>
       </div>
     </footer>
   );

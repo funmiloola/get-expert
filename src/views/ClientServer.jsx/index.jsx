@@ -16,7 +16,7 @@ export default function ClientSection() {
             className={`flex-row items-start gap-3  mid:gap-8`}
             extra={
               <button
-                className={`flex gap-0.5 mid:gap-1.5 items-center bg-[#3B82F6] py-1 px-2  mid:py-2 mid:px-4 rounded-md ${
+                className={`flex gap-0.5 mid:gap-1.5 items-center bg-[#3B82F6] py-1 px-2  mid:py-2 mid:px-4 rounded-md hover:bg-blue-600 cursor-pointer ${
                   showExpertBtn ? "block" : "hidden"
                 }`}
               >
@@ -35,7 +35,7 @@ export default function ClientSection() {
                   `px-13 xl:px-20 py-2 text-sm font-semibold rounded-md cursor-pointer ${
                     isActive
                       ? "bg-white ml-1  my-0.5 text-[#414651] border border-white shadow-sm"
-                      : "text-[#717680]"
+                      : "text-[#717680] hover:bg-[#FAFAFA] "
                   }`
                 }
               >
@@ -45,10 +45,10 @@ export default function ClientSection() {
               <NavLink
                 to="experts"
                 className={({ isActive }) =>
-                  `px-15 xl:px-17.5 py-2 text-sm font-semibold rounded-md cursor-pointer ${
+                  `px-15 xl:px-18 py-2 text-sm font-semibold rounded-md cursor-pointer ${
                     isActive
                       ? "bg-white  my-0.5 text-[#414651] border border-white shadow-sm"
-                      : "text-[#717680]"
+                      : "text-[#717680] hover:bg-[#FAFAFA] "
                   }`
                 }
               >

@@ -65,6 +65,7 @@ export default function Table({ filteredWorkshop }) {
                     <img
                       src={icon}
                       alt=""
+                      className="hover:bg-[#E9EAEB] hover:rounded-sm"
                       onClick={() =>
                         setOpenOptions(openOptions === index ? null : index)
                       }
@@ -79,7 +80,11 @@ export default function Table({ filteredWorkshop }) {
               )
             )
           ) : (
-            <p> No results found</p>
+            <tr>
+              <td colSpan="6" className="text-center pt-4">
+                No results found
+              </td>
+            </tr>
           )}
         </tbody>
       </table>

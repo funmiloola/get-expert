@@ -69,7 +69,7 @@ export default function Review() {
           </div>
         ))}
       </div>
-      <button className="px-6 py-4 font-semibold text-base text-[#030712] border border-[#D0D5DD] rounded-lg">
+      <button className="px-6 py-4 font-semibold text-base text-[#030712] border border-[#D0D5DD] rounded-lg hover:bg-[#FAFAFA] hover:text-[#3B82F6]">
         Show more reviews
       </button>
     </>

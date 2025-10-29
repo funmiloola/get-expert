@@ -5,16 +5,16 @@ import Table from "./Table";
 
 export default function DashboardSection() {
   return (
-    <section className="font-sans">
+    <section className="font-sans pb-10">
       <DashboardHeader
         title="My dashboard"
         className="flex-col gap-3  sm:flex-row sm:items-center font-sans"
         extra={
           <div className="flex gap-3">
-            <div className="px-2 py-1 mid:px-4 mid:py-2.5 border border-[#D5D7DA] rounded-lg font-semibold text-xs mid:text-sm text-[#414651] cursor-pointer">
+            <div className="px-2 py-1 mid:px-4 mid:py-2.5 border border-[#D5D7DA] rounded-lg font-semibold text-xs mid:text-sm text-[#414651] cursor-pointer hover:bg-[#FAFAFA] hover:rounded-md">
               What's new?
             </div>
-            <div className="flex gap-1 px-2 py-1 mid:px-4 mid:py-2.5 border border-[#D5D7DA] rounded-lg cursor-pointer">
+            <div className="flex gap-1 px-2 py-1 mid:px-4 mid:py-2.5 border border-[#D5D7DA] rounded-lg cursor-pointer hover:bg-[#FAFAFA] hover:rounded-md">
               <img
                 src="/Icons/Setting.svg"
                 alt=""

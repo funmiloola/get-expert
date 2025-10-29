@@ -135,10 +135,10 @@ export default function Form() {
         </div>
       </div>
       <div className="flex items-center gap-3 pt-5 pb-5">
-        <button className="px-4 py-2 text-[#344054] text-sm font-semibold rounded-lg border border-[#D0D5DD]">
+        <button className="px-4 py-2 text-[#344054] text-sm font-semibold rounded-lg border border-[#D0D5DD] hover:bg-[#E9EAEB] cursor-pointer">
           Cancel
         </button>
-        <button className="px-4 py-2 text-white text-sm font-semibold rounded-lg border border-[#3B82F6] bg-[#3B82F6]">
+        <button className="px-4 py-2 text-white text-sm font-semibold rounded-lg border border-[#3B82F6] bg-[#3B82F6] hover:bg-blue-600 cursor-pointer">
           Save
         </button>
       </div>

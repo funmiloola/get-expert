@@ -66,7 +66,11 @@ export default function ClientTableDetail({
               )
             )
           ) : (
-            <p>No results found</p>
+              <tr>
+                <td colSpan="8"  className="text-center pt-4">
+                  No results found
+                </td>
+              </tr>
           )}
         </tbody>
       </table>

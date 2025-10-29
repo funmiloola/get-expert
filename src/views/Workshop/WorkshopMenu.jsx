@@ -14,7 +14,7 @@ export default function WorkshopMenu() {
             <li
               key={index}
               className={`text-sm text-[#030712] py-2  pl-6 cursor-pointer ${
-                index === 0 ? "bg-[#E9EAEB]" : ""
+                index === 0 ? "bg-[#E9EAEB]" : "hover:bg-gray-100"
               }`}
             >
               <NavLink to={menu.path}>{menu.name}</NavLink>

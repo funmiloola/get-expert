@@ -33,9 +33,9 @@ export default function ProfileModal() {
           </p>
         </div>
       </div>
-      <ul className="bg-white flex flex-col gap-3 py-3 pl-4 border-b border-b-[#E9EAEB]  rounded-b-2xl">
+      <ul className="bg-white flex flex-col gap-3 py-3 px-4 border-b border-b-[#E9EAEB]  rounded-b-2xl">
         {menus.map(({ img, name, index }) => (
-          <li key={index} className="flex gap-2 cursor-pointer">
+          <li key={index} className="flex gap-2 cursor-pointer hover:rounded-sm">
             <img src={img} alt="" className="w-3 h-3 md:w-6 md:h-6" />
             <span className="font-semibold text-[#414651] text-[10px] md:text-sm">
               {name}

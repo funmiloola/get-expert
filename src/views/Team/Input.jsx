@@ -10,7 +10,7 @@ export default function InputSection({input,onChange}) {
                       onChange={onChange}
                     />
                   </div>
-                  <div className="flex gap-2 items-center px-4 py-2 border border-[#3B82F6] bg-[#3B82F6] rounded-lg cursor-pointer">
+                  <div className="flex gap-2 items-center px-4 py-2  bg-[#3B82F6] rounded-lg cursor-pointer hover:bg-blue-600">
                     <img src="/Icons/Plus 4.svg" alt="" />
                     <span className="text-[#FFFFFF] font-semibold text-sm">
                       Add member

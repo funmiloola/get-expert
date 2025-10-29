@@ -25,8 +25,8 @@ export default function Menu() {
         {menuItems.map((menu, index) => (
           <li
             key={index}
-            className={`text-sm text-[#030712] py-2  pl-6 cursor-pointer ${
-              menu === "View" ? "bg-[#E9EAEB]" : ""
+            className={`text-sm text-[#030712] py-2  pl-6 cursor-pointer  ${
+               index === 0 ? "bg-[#E9EAEB] " : "hover:bg-[#FAFAFA]"
             }`}
           >
             <NavLink to={menu.to}>{menu.name}</NavLink>

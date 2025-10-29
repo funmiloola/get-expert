@@ -43,7 +43,7 @@ export default function ExpertProfileSection() {
         {tableHeader.map(({ name, count, index, path }) => (
           <li
             key={index}
-            className="text-[10px] mid:text-sm text-[#717680] font-medium mid:font-semibold cursor-pointer"
+            className="text-[10px] mid:text-sm text-[#717680] font-medium mid:font-semibold cursor-pointer "
           >
             <NavLink
               to={path}
@@ -51,7 +51,7 @@ export default function ExpertProfileSection() {
               className={({ isActive }) =>
                 isActive
                   ? "border-b-2 border-b-[#1E55AF] pb-4  text-[#1E55AF]"
-                  : ""
+                  : "hover:border-b-2 border-b-[#1E55AF] pb-4 hover:text-[#1E55AF]"
               }
             >
               {({ isActive }) => (

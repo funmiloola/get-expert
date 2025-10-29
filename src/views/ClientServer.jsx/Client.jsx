@@ -45,7 +45,7 @@ export default function Client() {
         </div>
         <Table filteredTable={filteredTable} />
       </section>
-      <footer className="pb-3">
+      <footer className="pb-8">
         <div className="flex items-center justify-between pt-8">
           <h5 className="text-xs md:text-sm font-medium text-[#414651]">
             Page {count} of {filteredTable?.length}

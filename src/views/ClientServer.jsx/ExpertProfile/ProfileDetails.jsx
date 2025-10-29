@@ -36,7 +36,7 @@ export default function ProfileDetails() {
             </div>
             <div className="pt-3 mid:pt-7.5 flex flex-col mid:flex-row gap-2 mid:gap-12 mid:items-center">
               <p className="flex flex-col gap-1 text-sm text-[#475367]">
-                Status{" "}
+                Status
                 <span className="text-[#067647] border border-[#ABEFC6] font-medium bg-[#ECFDF3] rounded-2xl py-0.5 px-2.5">
                   Active
                 </span>
@@ -61,13 +61,12 @@ export default function ProfileDetails() {
             </div>
           </div>
           <div className="flex gap-3">
-            <button className="border border-[#D0D5DD] text-sm text-[#344054] font-semibold rounded-lg cursor-pointer px-4 py-1 mid:py-2">
+            <button className="border border-[#D0D5DD] text-sm text-[#344054] font-semibold rounded-lg cursor-pointer px-4 py-1 mid:py-2 hover:bg-[#E9EAEB]">
               Deactivate
             </button>
-            <button className="flex items-center gap-2 py-1 mid:py-2 px-4 mid:px-10 bg-[#DC2626] rounded-lg cursor-pointer">
+            <button className="flex items-center gap-2 py-1 mid:py-2 px-4 mid:px-10 bg-[#DC2626] rounded-lg cursor-pointer hover:bg-red-600">
               <img src="/Icons/Delete.svg" alt="" />
               <span className="font-semibold text-white text-[10px] mid:text-sm">
-                {" "}
                 Delete
               </span>
             </button>

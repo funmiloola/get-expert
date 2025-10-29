@@ -1,26 +1,25 @@
 import { useState } from "react";
 import { menuItems, menuSettings } from "../data";
-import { Link, useLocation,useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import LogoutModal from "./LogoutModal";
 
 export default function Sidebar() {
   const [openSidebar, setOpenSidebar] = useState(false);
-  const [user, setUser] = useState({})
-  const [openLogoutModal,setOpenLogoutModal] = useState(false)
+  const [user, setUser] = useState({});
+  const [openLogoutModal, setOpenLogoutModal] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   function handleOpenSidebar() {
     setOpenSidebar(true);
   }
   function handleCloseSidebar() {
     setOpenSidebar(false);
   }
- onAuthStateChanged(auth, (currentUser) => {
+  onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
-  
 
   return (
     <div className="font-sans px-0 mid:px-2  lg:px-8">
@@ -49,20 +48,20 @@ export default function Sidebar() {
           <ul className="pt-10 mid:pt-0">
             {menuItems.map(({ name, id, icon, to }) => (
               <Link to={to}>
-              <li
-                key={id}
-                onClick={handleCloseSidebar}
-                className={`flex gap-1 lg:gap-3 py-3.5 px-2 cursor-pointer  ${
-                  location.pathname === to ||
-                  (location.pathname.startsWith(to + "/") && to !== "/home")
-                    ? "bg-[#3B82F6] text-white rounded-md"
-                    : "bg-white "
+                <li
+                  key={id}
+                  onClick={handleCloseSidebar}
+                  className={`flex gap-1 lg:gap-3 py-3.5 px-2 cursor-pointer  ${
+                    location.pathname === to ||
+                    (location.pathname.startsWith(to + "/") && to !== "/home")
+                      ? "bg-[#3B82F6] text-white rounded-md"
+                      : "bg-white hover:bg-[#E9EAEB] hover:rounded-md"
                   }`}
-              >
+                >
                   <div
                     className={` w-4 h-4 md:w-5 md:h-5} ${
                       location.pathname === to ||
-                       (location.pathname.startsWith(to + "/") && to !== "/home")
+                      (location.pathname.startsWith(to + "/") && to !== "/home")
                         ? "stroke-white"
                         : "stroke-[#030712]"
                     }`}
@@ -72,8 +71,8 @@ export default function Sidebar() {
                   <span className="text-xs lg:text-sm block mid:hidden lg:block">
                     {name}
                   </span>
-              </li>
-                 </Link>
+                </li>
+              </Link>
             ))}
           </ul>
           <ul>
@@ -81,12 +80,22 @@ export default function Sidebar() {
               <Link to={to}>
                 <li
                   key={id}
-                  className={`flex gap-3  py-3.5 px-2 cursor-pointer ${location.pathname === to ||  (location.pathname.startsWith(to + "/") && to !== "/home") ? "bg-[#3B82F6] text-white rounded-md" : "bg-white "}`}
-                  
+                  className={`flex gap-3  py-3.5 px-2 cursor-pointer ${
+                    location.pathname === to ||
+                    (location.pathname.startsWith(to + "/") && to !== "/home")
+                      ? "bg-[#3B82F6] text-white rounded-md"
+                      : "bg-white hover:bg-[#E9EAEB] hover:rounded-md"
+                  }`}
                   onClick={handleCloseSidebar}
                 >
-                  <div className={`w-4 h-4 md:w-5 md:h-5  ${location.pathname === to ||  (location.pathname.startsWith(to + "/") && to !== "/home") ? "stroke-white"
-                        : "stroke-[#030712]"}`}>
+                  <div
+                    className={`w-4 h-4 md:w-5 md:h-5  ${
+                      location.pathname === to ||
+                      (location.pathname.startsWith(to + "/") && to !== "/home")
+                        ? "stroke-white"
+                        : "stroke-[#030712]"
+                    }`}
+                  >
                     {icon}
                   </div>
                   <span className="text-xs lg:text-sm block mid:hidden lg:block">
@@ -105,7 +114,7 @@ export default function Sidebar() {
           />
           <div className="flex flex-col gap-2">
             <h2 className="text-xs lg:text-sm block mid:hidden lg:block">
-              {user ?.displayName}
+              {user?.displayName}
             </h2>
             <p className="text-xs lg:text-sm block mid:hidden lg:block">
               {user?.email}
@@ -114,14 +123,12 @@ export default function Sidebar() {
           <img
             src="/Icons/Logout.svg"
             alt="logout-icon"
-            className="cursor-pointer block mid:hidden lg:block"
-            onClick={()=> setOpenLogoutModal(!openLogoutModal)}
+            className="cursor-pointer hover:bg-[#E9EAEB] p-1 hover:rounded-sm block mid:hidden lg:block"
+            onClick={() => setOpenLogoutModal(!openLogoutModal)}
           />
         </div>
       </aside>
-      {openLogoutModal && (
-        <LogoutModal />
-      )}
+      {openLogoutModal && <LogoutModal />}
     </div>
   );
 }
