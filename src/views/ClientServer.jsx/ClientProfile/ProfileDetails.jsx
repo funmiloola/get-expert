@@ -90,13 +90,11 @@ export default function ProfileDetails() {
                 Delete
               </span>
             </button>
-            <div className="px-1 py-1 mid:px-3.25 mid:py-2 border border-[#D0D5DD] rounded-lg cursor-pointer hover:bg-[#E9EAEB]">
-              <img
-                src="/Icons/Dropdown.svg"
-                alt=""
-                className="relative"
-                onClick={() => setOpenDropdown(!openDropdown)}
-              />
+            <div
+              className="px-1 py-1 mid:px-3.25 mid:py-2 border border-[#D0D5DD] rounded-lg cursor-pointer hover:bg-[#E9EAEB]"
+              onClick={() => setOpenDropdown(!openDropdown)}
+            >
+              <img src="/Icons/Dropdown.svg" alt="" className="relative" />
             </div>
           </div>
         </div>
