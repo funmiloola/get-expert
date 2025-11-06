@@ -51,6 +51,7 @@ export default function ClientProfileSection() {
           </li>
         ))}
       </ul>
+
       <Outlet />
     </section>
   );

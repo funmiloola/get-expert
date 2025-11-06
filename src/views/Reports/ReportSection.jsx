@@ -149,10 +149,11 @@ export default function ReportSection() {
                 )
               )
             ) : (
-                <tr>
-                   <td colSpan="8"  className="text-center pt-4">No results Found</td>
-                </tr>
-             
+              <tr>
+                <td colSpan="8" className="text-center pt-4">
+                  No results Found
+                </td>
+              </tr>
             )}
           </tbody>
         </table>

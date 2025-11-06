@@ -3,7 +3,7 @@ import PageSection from "../../../components/PagesSection";
 export default function Note() {
   const adminReports = [
     {
-      img:"/Images/Avatar.svg",
+      img: "/Images/Avatar.svg",
       adminName: "Alison Ogaga",
       note: "User received 1 refund this month for a duplicate purchase",
       datePublished: "Apr 12, 2023 | 09:32AM",

@@ -55,15 +55,15 @@ export default function ExpertWorkshop() {
       icon: "/Icons/Dropdown.svg",
     },
   ];
-  const [filterType, setFilterType] = useState("all")
-  const filteredDate = filteredByDays(filterType, trainingSessions)
+  const [filterType, setFilterType] = useState("all");
+  const filteredDate = filteredByDays(filterType, trainingSessions);
   const filteredTrainingSession = filteredDate.filter(({ productName }) =>
     productName.toLowerCase().includes(input.toLowerCase())
   );
-  const items = ["View details", "Flag", "Cancel"]
-  const [openDropdown, setOpenDropdown] = useState(null)
-  const dropdownRef = useRef()
-  useOnClickOutside(dropdownRef,()=> setOpenDropdown(null))
+  const items = ["View details", "Flag", "Cancel"];
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const dropdownRef = useRef();
+  useOnClickOutside(dropdownRef, () => setOpenDropdown(null));
   return (
     <>
       <div className="flex flex-col gap-4 md:flex-row md:gap-0 md:items-center justify-between pt-8">
@@ -74,7 +74,7 @@ export default function ExpertWorkshop() {
             placeholder="Search for registered"
           />
         </div>
-        <Filter currentFilter={filterType} onChange={setFilterType}/>
+        <Filter currentFilter={filterType} onChange={setFilterType} />
       </div>
       <div className="pt-8 overflow-x-auto w-full ">
         <table className="min-w-full table-auto border-collapse ">
@@ -94,16 +94,22 @@ export default function ExpertWorkshop() {
           <tbody>
             {filteredTrainingSession.length > 0 ? (
               filteredTrainingSession.map(
-                ({
-                  productName,
-                  date,
-                  bookedSeats,
-                  price,
-                  status,
-                  rating,
-                  icon,
-                },index) => (
-                  <tr key={index} className="border-b border-b-[#E9EAEB] text-left">
+                (
+                  {
+                    productName,
+                    date,
+                    bookedSeats,
+                    price,
+                    status,
+                    rating,
+                    icon,
+                  },
+                  index
+                ) => (
+                  <tr
+                    key={index}
+                    className="border-b border-b-[#E9EAEB] text-left"
+                  >
                     <td className=" py-6 px-4 text-left sm:font-medium  text-sm text-[#030712]">
                       {productName}
                     </td>
@@ -141,20 +147,32 @@ export default function ExpertWorkshop() {
                       {rating}
                     </td>
                     <td className="py-6 px-4 min-w-[65px] relative cursor-pointer">
-                      <img src={icon} alt="" className="hover:bg-[#E9EAEB] hover:rounded-sm" onClick={()=>setOpenDropdown(openDropdown === index ? null : index)} />
+                      <img
+                        src={icon}
+                        alt=""
+                        className="hover:bg-[#E9EAEB] hover:rounded-sm"
+                        onClick={() =>
+                          setOpenDropdown(openDropdown === index ? null : index)
+                        }
+                      />
                       {openDropdown === index && (
                         <div ref={dropdownRef}>
-                          <ClientDropdownMenu menuItems={items} className="right-8 bottom-0"/>
+                          <ClientDropdownMenu
+                            menuItems={items}
+                            className="right-8 bottom-0"
+                          />
                         </div>
-                       )}
+                      )}
                     </td>
                   </tr>
                 )
               )
             ) : (
-                <tr>
-                 <td colSpan="8" className="text-center pt-4">No results found</td>
-                </tr>
+              <tr>
+                <td colSpan="8" className="text-center pt-4">
+                  No results found
+                </td>
+              </tr>
             )}
           </tbody>
         </table>

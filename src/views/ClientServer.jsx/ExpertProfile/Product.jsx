@@ -53,16 +53,16 @@ export default function Product() {
       icon: "/Icons/Dropdown.svg",
     },
   ];
- const items =['View',"Unpublish","Edit","Flag"]
+  const items = ["View", "Unpublish", "Edit", "Flag"];
   const [input, setInput] = useState("");
-  const [openDropdown, setOpenDropdown] = useState(null)
-  const [filterType, setFilterType] = useState("all")
-  const filteredDate = filteredByDays(filterType,productData)
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [filterType, setFilterType] = useState("all");
+  const filteredDate = filteredByDays(filterType, productData);
   const filteredTable = filteredDate.filter(({ productName }) =>
     productName.toLowerCase().includes(input.toLowerCase())
   );
   const dropdownRef = useRef(null);
-useOnClickOutside(dropdownRef, () => setOpenDropdown(null));
+  useOnClickOutside(dropdownRef, () => setOpenDropdown(null));
 
   return (
     <>
@@ -94,16 +94,22 @@ useOnClickOutside(dropdownRef, () => setOpenDropdown(null));
           <tbody>
             {filteredTable.length > 0 ? (
               filteredTable.map(
-                ({
-                  productName,
-                  type,
-                  date,
-                  totalRevenue,
-                  rating,
-                  status,
-                  icon,
-                }, index) => (
-                  <tr key={index} className="border-b border-b-[#E9EAEB] text-left">
+                (
+                  {
+                    productName,
+                    type,
+                    date,
+                    totalRevenue,
+                    rating,
+                    status,
+                    icon,
+                  },
+                  index
+                ) => (
+                  <tr
+                    key={index}
+                    className="border-b border-b-[#E9EAEB] text-left"
+                  >
                     <td className=" py-6 px-6 text-left sm:font-medium  text-sm text-[#030712]">
                       {productName}
                     </td>
@@ -142,22 +148,32 @@ useOnClickOutside(dropdownRef, () => setOpenDropdown(null));
                       </span>{" "}
                     </td>
                     <td className=" py-6 px-2 min-w-[65px] cursor-pointer relative">
-                      <img src={icon} alt="" className="hover:bg-[#E9EAEB] hover:rounded-sm" onClick={() => setOpenDropdown(openDropdown === index ? null : index)} />
+                      <img
+                        src={icon}
+                        alt=""
+                        className="hover:bg-[#E9EAEB] hover:rounded-sm"
+                        onClick={() =>
+                          setOpenDropdown(openDropdown === index ? null : index)
+                        }
+                      />
                       {openDropdown === index && (
                         <div ref={dropdownRef}>
-                        <ClientDropdownMenu menuItems={items} className="bottom-0 right-8"/>
+                          <ClientDropdownMenu
+                            menuItems={items}
+                            className="bottom-0 right-8"
+                          />
                         </div>
-                    
-                  )}
-
+                      )}
                     </td>
                   </tr>
                 )
               )
             ) : (
-                <tr>
-                    <td colSpan="8" className=" text-center pt-4">No results found</td>
-                </tr>
+              <tr>
+                <td colSpan="8" className=" text-center pt-4">
+                  No results found
+                </td>
+              </tr>
             )}
           </tbody>
         </table>

@@ -99,74 +99,73 @@ export default function ReviewSection() {
               </th>
             </tr>
           </thead>
-         <tbody>
-  {filteredReview.length > 0 ? (
-    filteredReview.map(
-      (
-        {
-          itemType,
-          title,
-          reviewer,
-          stars,
-          textPreview,
-          dateSubmitted,
-          status,
-          icon,
-        },
-        index
-      ) => (
-        <tr
-          key={index}
-          className="text-left border-b border-b-[#E9EAEB] font-medium text-sm text-[#030712]"
-        >
-          <td className="px-4 py-6">{itemType}</td>
-          <td className="px-4 py-6">{title}</td>
-          <td className="px-4 py-6">{reviewer}</td>
-          <td className="flex gap-1 px-4 py-6">
-            {stars.map((star, i) => (
-              <img key={i} src={star} alt="star" />
-            ))}
-          </td>
-          <td className="px-4 py-6">{textPreview}</td>
-          <td className="px-4 py-6">{dateSubmitted}</td>
-          <td className="px-4 py-6">
-            <span
-              className={`border px-2 py-0.5 rounded-2xl ${
-                status === "Published"
-                  ? "text-[#067647] bg-[#ECFDF3] border-[#ABEFC6]"
-                  : "text-[#B42318] bg-[#FEF3F2] border-[#FECDCA]"
-              }`}
-            >
-              {status}
-            </span>
-          </td>
-          <td className="px-4 py-6 min-w-[50px] cursor-pointer relative">
-            <img
-              src={icon}
-              alt=""
-              className="hover:bg-[#E9EAEB] hover:rounded-sm"
-              onClick={() =>
-                setOpenOptions(openOptions === index ? null : index)
-              }
-            />
-            {openOptions === index && (
-              <div ref={dropdownRef}>
-                <ReviewMenu />
-              </div>
+          <tbody>
+            {filteredReview.length > 0 ? (
+              filteredReview.map(
+                (
+                  {
+                    itemType,
+                    title,
+                    reviewer,
+                    stars,
+                    textPreview,
+                    dateSubmitted,
+                    status,
+                    icon,
+                  },
+                  index
+                ) => (
+                  <tr
+                    key={index}
+                    className="text-left border-b border-b-[#E9EAEB] font-medium text-sm text-[#030712]"
+                  >
+                    <td className="px-4 py-6">{itemType}</td>
+                    <td className="px-4 py-6">{title}</td>
+                    <td className="px-4 py-6">{reviewer}</td>
+                    <td className="flex gap-1 px-4 py-6">
+                      {stars.map((star, i) => (
+                        <img key={i} src={star} alt="star" />
+                      ))}
+                    </td>
+                    <td className="px-4 py-6">{textPreview}</td>
+                    <td className="px-4 py-6">{dateSubmitted}</td>
+                    <td className="px-4 py-6">
+                      <span
+                        className={`border px-2 py-0.5 rounded-2xl ${
+                          status === "Published"
+                            ? "text-[#067647] bg-[#ECFDF3] border-[#ABEFC6]"
+                            : "text-[#B42318] bg-[#FEF3F2] border-[#FECDCA]"
+                        }`}
+                      >
+                        {status}
+                      </span>
+                    </td>
+                    <td className="px-4 py-6 min-w-[50px] cursor-pointer relative">
+                      <img
+                        src={icon}
+                        alt=""
+                        className="hover:bg-[#E9EAEB] hover:rounded-sm"
+                        onClick={() =>
+                          setOpenOptions(openOptions === index ? null : index)
+                        }
+                      />
+                      {openOptions === index && (
+                        <div ref={dropdownRef}>
+                          <ReviewMenu />
+                        </div>
+                      )}
+                    </td>
+                  </tr>
+                )
+              )
+            ) : (
+              <tr>
+                <td colSpan="8" className="text-center pt-4">
+                  No reviews found
+                </td>
+              </tr>
             )}
-          </td>
-        </tr>
-      )
-    )
-  ) : (
-    <tr>
-      <td colSpan="8" className="text-center pt-4">
-        No reviews found
-      </td>
-    </tr>
-  )}
-</tbody>
-
+          </tbody>
         </table>
       </div>
 

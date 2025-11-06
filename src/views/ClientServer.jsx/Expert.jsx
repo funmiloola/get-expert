@@ -9,23 +9,22 @@ import PageSection from "../../components/PagesSection";
 
 export default function Expert() {
   const [input, setInput] = useState("");
-  const [filterType, setFilterType] = useState("all")
-  const filteredDate = filteredByDays(filterType, clients)
-  const [currentTable, setCurrentTable] = useState(0)
+  const [filterType, setFilterType] = useState("all");
+  const filteredDate = filteredByDays(filterType, clients);
+  const [currentTable, setCurrentTable] = useState(0);
   const filteredTable = filteredDate?.[currentTable]?.filter(
     ({ name, email }) =>
       name.toLowerCase().includes(input.toLowerCase()) ||
       email.toLowerCase().includes(input.toLowerCase())
   );
   function handleDisplayTable() {
-    setCurrentTable((prev)=> prev + 1)
-    setCount((prev)=> prev + 1)
+    setCurrentTable((prev) => prev + 1);
+    setCount((prev) => prev + 1);
   }
   function handlePrevDisplay() {
-    setCurrentTable((prev) => prev - 1)
-    setCount((prev) => prev - 1 )
+    setCurrentTable((prev) => prev - 1);
+    setCount((prev) => prev - 1);
   }
-  
 
   return (
     <>
@@ -48,7 +47,10 @@ export default function Expert() {
           <Table filteredTable={filteredTable} />
         </div>
       </section>
-      <PageSection onPrevClick={ handleDisplayTable} onNextClick={handlePrevDisplay} />
+      <PageSection
+        onPrevClick={handleDisplayTable}
+        onNextClick={handlePrevDisplay}
+      />
     </>
   );
 }

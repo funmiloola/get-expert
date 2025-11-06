@@ -52,7 +52,11 @@ export default function ProfileDetails() {
                   Country
                 </p>
                 <div className="flex gap-3 items-center">
-                  <img src="/Icons/Vector (9).svg" alt="" className="rounded-full" />
+                  <img
+                    src="/Icons/Vector (9).svg"
+                    alt=""
+                    className="rounded-full"
+                  />
                   <span className="font-semibold text-[#030712] text-xs mid:text-base">
                     Lagos, Nigeria
                   </span>

@@ -74,9 +74,11 @@ export default function ClientWorkshop() {
                 )
               )
             ) : (
-                <tr>
-                <td colSpan="8" className="text-center pt-4">No results found</td>  
-                </tr>
+              <tr>
+                <td colSpan="8" className="text-center pt-4">
+                  No results found
+                </td>
+              </tr>
             )}
           </tbody>
         </table>

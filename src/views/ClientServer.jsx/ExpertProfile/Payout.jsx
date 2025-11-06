@@ -69,7 +69,9 @@ export default function Payout() {
                 <td className=" py-6 px-4 mid:px-15 text-left sm:font-medium  text-sm text-[#030712]">
                   {paymentMethod}
                 </td>
-                <td className={`py-6 px-4 mid:px-15 text-left sm:font-medium  text-sm`}>
+                <td
+                  className={`py-6 px-4 mid:px-15 text-left sm:font-medium  text-sm`}
+                >
                   <span
                     className={` rounded-2xl px-2 py-0.5 ${
                       status === "Paid"

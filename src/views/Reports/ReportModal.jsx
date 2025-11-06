@@ -1,5 +1,4 @@
-
-export default function ReportModal({onClick}) {
+export default function ReportModal({ onClick }) {
   const reportData = [
     { name: "Report Type", data: "Product" },
     { name: "Item Type", data: "Digital Product" },
@@ -9,7 +8,7 @@ export default function ReportModal({onClick}) {
       data: "This template is not as advertised. It's missing key slides shown in the preview and has several broken elements.",
     },
     { name: "Expert", pic: "/Images/Image (6).svg", data: "@slidepro" },
-    { name: "Reported By", pic:"/Images/Image (6).svg", data: "@temilolu" },
+    { name: "Reported By", pic: "/Images/Image (6).svg", data: "@temilolu" },
     { name: "Date Reported", data: "June 12, 2025 • 4:22 PM" },
     { name: "Status", data: "Resolved" },
   ];
@@ -21,7 +20,12 @@ export default function ReportModal({onClick}) {
           <h2 className="text-[20px] text-[#030712] font-semibold">
             Report ID RPT_00492
           </h2>
-          <img src="/Icons/icons8-close.svg" alt="" className="cursor-pointer" onClick={onClick}/>
+          <img
+            src="/Icons/icons8-close.svg"
+            alt=""
+            className="cursor-pointer"
+            onClick={onClick}
+          />
         </header>
         <ul className="flex flex-col gap-4 pt-6">
           {reportData.map(({ name, data, pic }) => (
@@ -40,18 +44,25 @@ export default function ReportModal({onClick}) {
                     data === "Resolved"
                       ? "border px-2 py-0.5 text-[#067647] bg-[#ECFDF3] border-[#ABEFC6] rounded-2xl"
                       : null
-                  } ${data === reportData[3].data ? "text-[#535862] font-normal  text-right":null}`}
+                  } ${
+                    data === reportData[3].data
+                      ? "text-[#535862] font-normal  text-right"
+                      : null
+                  }`}
                 >
                   {data}
                 </span>
               )}
             </li>
           ))}
-              </ul>
-              <div className="flex flex-col gap-1.5 pt-30">
-                  <label className="text-sm text-[#414651]">Notes</label>
-                  <textarea className="w-full px-3 pt-3 pb-8 border border-[#D5D7DA] text-[#717680] text-base rounded-lg outline-none" placeholder="Add a few notes to help you later"/>
-              </div>
+        </ul>
+        <div className="flex flex-col gap-1.5 pt-30">
+          <label className="text-sm text-[#414651]">Notes</label>
+          <textarea
+            className="w-full px-3 pt-3 pb-8 border border-[#D5D7DA] text-[#717680] text-base rounded-lg outline-none"
+            placeholder="Add a few notes to help you later"
+          />
+        </div>
       </div>
     </section>
   );

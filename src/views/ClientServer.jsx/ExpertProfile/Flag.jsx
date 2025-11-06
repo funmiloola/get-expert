@@ -3,7 +3,7 @@ export default function ExpertFlag() {
     {
       profilePicture: "/Images/Avatars (1).svg",
       reportedBy: "@LayoTech",
-      flag:"/Icons/Vector (12).svg",
+      flag: "/Icons/Vector (12).svg",
       location: "Lagos, Nigeria",
       date: "May 30, 2025",
       comment: `"This consultant misrepresented what was in the product."`,

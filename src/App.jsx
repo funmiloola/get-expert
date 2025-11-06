@@ -38,58 +38,57 @@ import Reports from "./views/Reports/index.jsx";
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Signin />} />
-        <Route path="/signup" element={<Signup/>}/>
-        <Route path="/home" element={<SectionDisplay />}>
-          <Route index element={<DashboardSection />} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/home" element={<SectionDisplay />}>
+            <Route index element={<DashboardSection />} />
 
-          <Route path="clients" element={<ClientSection />}>
-            <Route index element={<Client />} />
-            <Route path="experts" element={<Expert />} />
-            <Route path="client" element={<ClientProfileSection />}>
-              <Route index element={<PurchaseSection />} />
-              <Route path="workshop" element={<ClientWorkshop />} />
-              <Route path="review" element={<Review />} />
-              <Route path="flags" element={<Flag />} />
-              <Route path="notes" element={<Note />} />
+            <Route path="clients" element={<ClientSection />}>
+              <Route index element={<Client />} />
+              <Route path="experts" element={<Expert />} />
+              <Route path="client" element={<ClientProfileSection />}>
+                <Route index element={<PurchaseSection />} />
+                <Route path="workshop" element={<ClientWorkshop />} />
+                <Route path="review" element={<Review />} />
+                <Route path="flags" element={<Flag />} />
+                <Route path="notes" element={<Note />} />
+              </Route>
+              <Route path="profile-expert" element={<ExpertProfileSection />}>
+                <Route index element={<Product />} />
+                <Route path="workshop" element={<ExpertWorkshop />} />
+                <Route path="payout" element={<Payout />} />
+                <Route path="review" element={<ExpertReview />} />
+                <Route path="flags" element={<ExpertFlag />} />
+                <Route path="notes" element={<ExpertNote />} />
+              </Route>
             </Route>
-            <Route path="profile-expert" element={<ExpertProfileSection />}>
-              <Route index element={<Product />} />
-              <Route path="workshop" element={<ExpertWorkshop />} />
-              <Route path="payout" element={<Payout />} />
-              <Route path="review" element={<ExpertReview />} />
-              <Route path="flags" element={<ExpertFlag />} />
-              <Route path="notes" element={<ExpertNote />} />
+            <Route path="workshops" element={<Workshop />}>
+              <Route path="workshop-details" element={<WorkshopDetails />} />
             </Route>
-          </Route>
-          <Route path="workshops" element={<Workshop />}>
-            <Route path="workshop-details" element={<WorkshopDetails />} />
-          </Route>
-          <Route path="transactions" element={<Transactions />} />
-          <Route path="product" element={<ProductManagement />} />
-          <Route path="reports" element={<Reports />}>
-            <Route index element={<ReportSection />} />
-            <Route path="reviews" element={<ReviewSection />} />
-          </Route>
-          <Route path="teams" element={<Team />} />
-          <Route path="menu" element={<Menu/>}/>
-          <Route path="settings" element={<Settings />}>
-            <Route index element={<SettingsProfile />} />
+            <Route path="transactions" element={<Transactions />} />
+            <Route path="product" element={<ProductManagement />} />
+            <Route path="reports" element={<Reports />}>
+              <Route index element={<ReportSection />} />
+              <Route path="reviews" element={<ReviewSection />} />
+            </Route>
+            <Route path="teams" element={<Team />} />
+            <Route path="menu" element={<Menu />} />
+            <Route path="settings" element={<Settings />}>
+              <Route index element={<SettingsProfile />} />
               <Route path="password" element={<Password />} />
               <Route path="wallet" element={<Wallet />} />
-              <Route path="notification" element={<SettingNotification/>}/>
+              <Route path="notification" element={<SettingNotification />} />
+            </Route>
+            <Route path="support" element={<Support />} />
           </Route>
-          <Route path="support" element={<Support/>} />
-  
-        </Route>
 
-        <Route>404 Not Found</Route>
-      </Routes>
+          <Route>404 Not Found</Route>
+        </Routes>
       </BrowserRouter>
       <ToastContainer position="top-center" autoClose={4000} />
-      </>
+    </>
   );
 }
 

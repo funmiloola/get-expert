@@ -100,9 +100,11 @@ export default function Table({ filteredProduct }) {
                 )
               )
             ) : (
-                <tr>
-                 <td colSpan="8" className="pt-4 text-center">No results found</td>
-                </tr>
+              <tr>
+                <td colSpan="8" className="pt-4 text-center">
+                  No results found
+                </td>
+              </tr>
             )}
           </tbody>
         </table>
