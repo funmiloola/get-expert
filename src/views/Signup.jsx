@@ -4,12 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
-
+import { useState } from "react";
 export default function Signup() {
   const {
     register,
     handleSubmit,
     getValues,
+    watch,
     formState: { errors, isSubmitting },
     setError,
   } = useForm();
@@ -45,6 +46,11 @@ export default function Signup() {
       });
     }
   };
+  const [showPassword, setShowPassword] = useState(false)
+   const passwordValue = watch("password");
+  const togglePassword = () => {
+    setShowPassword((prev) => !prev)
+  }
   return (
     <>
       <div className="font-sans flex flex-col items-center gap-4 pt-24 px-8 lg:px-0">
@@ -103,7 +109,7 @@ export default function Signup() {
           <div>
             <InputField
               label="Password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="••••••••"
               {...register("password", {
                 minLength: {
@@ -112,7 +118,11 @@ export default function Signup() {
                 },
                 required: "Password is required",
               })}
-            />
+            >
+              <div onClick={() => togglePassword()} className={passwordValue === "" ? 'hidden':'block'}>
+                {showPassword ? <img src="/Icons/view.png" className="w-4 h-4" /> : <img src="/Icons/hide.png"  className="w-4 h-4"/>}
+              </div>
+            </InputField>
             {errors.password && (
               <div className="text-red-500">{errors.password.message}</div>
             )}

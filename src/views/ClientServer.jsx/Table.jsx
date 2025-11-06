@@ -5,8 +5,9 @@ import { useOnClickOutside } from "usehooks-ts";
 export default function Table({ filteredTable }) {
   const [openOptions, setOpenOptions] = useState(null);
   const dropdownRef = useRef();
+  
   useOnClickOutside(dropdownRef, () => setOpenOptions(null));
-
+  
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full table-auto border-collapse">
@@ -102,9 +103,9 @@ export default function Table({ filteredTable }) {
             )
           ) : (
             <tr>
-                <td colSpan="8" className="text-center pt-4">
-                 No results found
-                </td>
+              <td colSpan="8" className="text-center pt-4">
+                No results found
+              </td>
             </tr>
           )}
         </tbody>

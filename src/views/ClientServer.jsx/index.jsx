@@ -31,32 +31,32 @@ export default function ClientSection() {
               </button>
             }
           >
-            <div className="flex items-center w-full mid:w-1/2  xl:w-[35%] mt-4 bg-[#E9EAEB] border-[#E9EAEB] rounded-md">
+            <div className="px-1 py-0.5 flex items-center w-fit gap-3 mt-4 bg-[#E9EAEB] border-[#E9EAEB] rounded-md">
               <NavLink
                 end
                 to=""
                 className={({ isActive }) =>
-                  `px-13 xl:px-15 py-2 text-sm font-semibold rounded-md cursor-pointer ${
+                  ` py-2 px-14 text-sm font-semibold rounded-md cursor-pointer ${
                     isActive
-                      ? "bg-white ml-1  my-0.5 text-[#414651] border border-white shadow-sm"
+                      ? "bg-white text-[#414651] border border-white shadow-sm"
                       : "text-[#717680] hover:bg-[#FAFAFA] "
                   }`
                 }
               >
-                Clients
+              <span>Clients</span>  
               </NavLink>
 
               <NavLink
                 to="experts"
                 className={({ isActive }) =>
-                  `px-15 xl:px-15 py-2 text-sm font-semibold rounded-md cursor-pointer ${
+                  ` py-2 px-14 text-sm font-semibold rounded-md cursor-pointer ${
                     isActive
-                      ? "bg-white  my-0.5 text-[#414651] border border-white shadow-sm"
+                      ? "bg-white text-[#414651] border border-white shadow-sm"
                       : "text-[#717680] hover:bg-[#FAFAFA] "
                   }`
                 }
               >
-                Experts
+               <span>Experts</span> 
               </NavLink>
             </div>
           </DashboardHeader>

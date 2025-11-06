@@ -3,7 +3,7 @@ export default function TransactionMenu({ onClick }) {
 
   return (
     <>
-      <section className="font-sans absolute right-8 top-0 w-42 md:w-[235px] z-50 bg-white border border-white rounded-xl shadow-xs px-1 pt-1.5 pb-3">
+      <section className="font-sans absolute right-8 top-0 w-42 md:w-[235px] z-50 bg-white border border-gray-200 rounded-xl shadow-xs px-1 pt-1.5 pb-3">
         <ul className="">
           {menuItems.map((menu, index) => (
             <li

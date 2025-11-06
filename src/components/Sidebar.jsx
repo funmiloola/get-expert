@@ -34,7 +34,7 @@ export default function Sidebar() {
       <aside
         className={
           openSidebar
-            ? "fixed z-10 top-0 left-0 w-1/2 shadow-lg px-3 bg-white h-screen"
+            ? "fixed z-10 top-0 left-0 w-1/2 shadow-lg px-3 bg-white inset-0"
             : "hidden mid:block mid:h-full"
         }
       >

@@ -1,9 +1,13 @@
 import InputField from "../components/inputField";
-import { useForm } from "react-hook-form";
+import { useForm, Watch } from "react-hook-form";
 import { auth } from "../firebase/firebase";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword,sendPasswordResetEmail} from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 import { toast } from "react-toastify";
+import { useState } from "react";
 export default function Signin() {
   const navigate = useNavigate();
   const {
@@ -11,6 +15,7 @@ export default function Signin() {
     handleSubmit,
     formState: { isSubmitting, errors },
     getValues,
+    watch
   } = useForm();
   const login = async () => {
     const email = getValues("email");
@@ -23,17 +28,16 @@ export default function Signin() {
     }
   };
   const forgotPassword = async () => {
-    const email = getValues("email")
-    if (!email) return toast.error("Enter a valid email")
+    const email = getValues("email");
+    if (!email) return toast.error("Enter a valid email");
     try {
-      await sendPasswordResetEmail(auth, email)
-      return toast.success("Email sent successfully")
+      await sendPasswordResetEmail(auth, email);
+      return toast.success("Email sent successfully");
+    } catch (error) {
+      const errorMessage = error.code;
+      toast.error(errorMessage || "Something went wrong");
     }
-    catch (error) {
-   const errorMessage = error.code;
-      toast.error(errorMessage || "Something went wrong")
-    }
-}
+  };
   const errorMsg = async () => {
     const response = await login();
     try {
@@ -65,6 +69,11 @@ export default function Signin() {
       throw error;
     }
   };
+  const [showPassword, setShowPassword] = useState(false)
+  const passwordValue = watch("password")
+  const togglePassword = () => {
+    setShowPassword((prev) => !prev)
+  } 
   return (
     <>
       <div className="font-sans flex flex-col items-center gap-4 pt-24 px-8 lg:px-0">
@@ -101,7 +110,7 @@ export default function Signin() {
           <div>
             <InputField
               label="Password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="••••••••"
               {...register("password", {
                 minLength: {
@@ -110,13 +119,22 @@ export default function Signin() {
                 },
                 required: "Password is required",
               })}
-            />
+            >
+              <div onClick={()=>togglePassword()} className={passwordValue === "" ? 'hidden' : 'block'}>
+                {showPassword ?  <img src="/Icons/view.png" className="w-4 h-4"/>  : 
+                <img src="/Icons/hide.png" className="w-4 h-4"/>
+             } 
+              </div>
+            </InputField>
             {errors.password && (
               <div className="text-red-500">{errors.password.message}</div>
             )}
           </div>
 
-          <p className="cursor-pointer text-[#1E55AF] text-center text-base font-semibold" onClick={()=>forgotPassword()}>
+          <p
+            className="cursor-pointer text-[#1E55AF] text-center text-base font-semibold"
+            onClick={() => forgotPassword()}
+          >
             Forgout Password?
           </p>
           <button

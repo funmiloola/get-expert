@@ -6,32 +6,32 @@ export default function Reports() {
       <h2 className="text-xl mid:text-2xl text-[#181D27] font-bold pl-2 mid:pl-0">
         Reports & Reviews
       </h2>
-      <div className="flex items-center  xl:w-[36%] mt-4 bg-[#E9EAEB] border-[#E9EAEB] rounded-md">
+      <div className="px-1 py-0.5 flex items-center gap-3 w-fit mt-4 bg-[#E9EAEB] border-[#E9EAEB] rounded-md">
         <NavLink
           end
           to=""
           className={({ isActive }) =>
-            `px-15 xl:px-15 py-2 text-sm font-semibold rounded-md cursor-pointer ${
+            `px-14 py-2 text-sm font-semibold rounded-md cursor-pointer ${
               isActive
-                ? "bg-white ml-1  my-0.5 text-[#414651] border border-white shadow-sm"
+                ? "bg-white text-[#414651] border border-white shadow-sm"
                 : "text-[#717680] hover:bg-[#FAFAFA]"
             }`
           }
         >
-          Reports
+          <span>Reports</span>
         </NavLink>
 
         <NavLink
           to="reviews"
           className={({ isActive }) =>
-            `px-12 xl:px-15 py-2 text-sm font-semibold rounded-md cursor-pointer ${
+            `px-14 py-2 text-sm font-semibold rounded-md cursor-pointer ${
               isActive
                 ? "bg-white  my-0.5 text-[#414651] border border-white shadow-sm"
                 : "text-[#717680] hover:bg-[#FAFAFA]"
             }`
           }
         >
-          Reviews
+          <span>Reviews</span>
         </NavLink>
       </div>
       <Outlet />

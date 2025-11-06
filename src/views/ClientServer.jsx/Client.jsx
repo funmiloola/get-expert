@@ -17,6 +17,7 @@ export default function Client() {
       name.toLowerCase().includes(input.toLowerCase()) ||
       email.toLowerCase().includes(input.toLowerCase())
   );
+  const [selectedUser,setSelectedUser] = useState(null)
   function handleDisplayTable() {
     setCurrentTable((prev) => prev + 1);
     setCount((prev) => prev + 1);
@@ -25,7 +26,9 @@ export default function Client() {
     setCurrentTable((prev) => prev - 1);
     setCount((prev) => prev - 1);
   }
-
+const handleViewDetails = (name,email) => {
+    setSelectedUser({name,email})
+  }
   return (
     <>
       <section>
@@ -43,7 +46,7 @@ export default function Client() {
           </div>
           <Filter currentFilter={filterType} onChange={setFilterType} />
         </div>
-        <Table filteredTable={filteredTable} />
+        <Table filteredTable={filteredTable}  />
       </section>
       <footer className="pb-8">
         <div className="flex items-center justify-between pt-8">

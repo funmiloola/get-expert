@@ -15,7 +15,7 @@ export default function ProfileModal() {
   });
 
   return (
-    <section className="font-sans absolute right-8 top-7 w-45 md:w-64 z-50 bg-gray-50 rounded-xl">
+    <section className="font-sans absolute right-8 top-7 w-45 md:w-64 z-50 bg-gray-50 rounded-xl border border-gray-100">
       <div className="flex items-center md:items-start gap-1 pt-3 border-b border-b-gray-200">
         <div>
           <img
@@ -35,7 +35,10 @@ export default function ProfileModal() {
       </div>
       <ul className="bg-white flex flex-col gap-3 py-3 px-4 border-b border-b-[#E9EAEB]  rounded-b-2xl">
         {menus.map(({ img, name, index }) => (
-          <li key={index} className="flex gap-2 cursor-pointer hover:rounded-sm">
+          <li
+            key={index}
+            className="flex gap-2 cursor-pointer hover:rounded-sm"
+          >
             <img src={img} alt="" className="w-3 h-3 md:w-6 md:h-6" />
             <span className="font-semibold text-[#414651] text-[10px] md:text-sm">
               {name}
